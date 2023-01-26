@@ -1,0 +1,378 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://PLayer/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Level/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/Enemy1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Trees/Trees.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cover/Cover.tscn" type="PackedScene" id=5]
+
+[node name="Main" type="Node"]
+
+[node name="Ground Textures" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 65536, 0, 65541, 65537, 0, 65541, 65538, 0, 65541, 65539, 0, 65541, 65540, 0, 65541, 65541, 0, 65541, 65542, 0, 65541, 65543, 0, 65541, 65544, 0, 65541, 65545, 0, 65541, 65546, 0, 65541, 65547, 0, 65541, 65548, 0, 65541, 65549, 0, 65541, 65550, 0, 65541, 65551, 0, 65541, 65552, 0, 65541, 65553, 0, 65541, 65554, 0, 65541, 65555, 0, 65541, 65556, 0, 65541, 65557, 0, 65541, 65558, 0, 65541, 65559, 0, 65541, 65560, 0, 65541, 65561, 0, 65541, 65562, 0, 65541, 65563, 0, 65541, 65564, 0, 65541, 65565, 0, 65541, 131072, 0, 65541, 131073, 0, 393220, 131074, 0, 393220, 131075, 0, 393220, 131076, 0, 393220, 131077, 0, 393220, 131078, 0, 393220, 131079, 0, 393220, 131080, 0, 393220, 131081, 0, 393220, 131082, 0, 393220, 131083, 0, 393220, 131084, 0, 393220, 131085, 0, 393220, 131086, 0, 65541, 131087, 0, 65541, 131088, 0, 65541, 131089, 0, 65541, 131090, 0, 65541, 131091, 0, 65541, 131092, 0, 65541, 131093, 0, 65541, 131094, 0, 65541, 131095, 0, 65541, 131096, 0, 65541, 131097, 0, 65541, 131098, 0, 65541, 131099, 0, 65541, 131100, 0, 65541, 131101, 0, 65541, 196608, 0, 65541, 196609, 0, 393220, 196610, 0, 393220, 196611, 0, 393220, 196612, 0, 393220, 196613, 0, 393220, 196614, 0, 393220, 196615, 0, 393220, 196616, 0, 393220, 196617, 0, 393220, 196618, 0, 393220, 196619, 0, 393220, 196620, 0, 393220, 196621, 0, 393220, 196622, 0, 65541, 196623, 0, 65541, 196624, 0, 65541, 196625, 0, 65541, 196626, 0, 65541, 196627, 0, 65541, 196628, 0, 65541, 196629, 0, 65541, 196630, 0, 65541, 196631, 0, 65541, 196632, 0, 65541, 196633, 0, 65541, 196634, 0, 65541, 196635, 0, 65541, 196636, 0, 65541, 196637, 0, 65541, 262144, 0, 65541, 262145, 0, 393220, 262146, 0, 393220, 262147, 0, 65537, 262148, 0, 65539, 262149, 0, 65539, 262150, 0, 65539, 262151, 0, 65539, 262152, 0, 65539, 262153, 0, 65539, 262154, 0, 65539, 262155, 0, 65540, 262156, 0, 393220, 262157, 0, 393220, 262158, 0, 65541, 262159, 0, 65541, 262160, 0, 65541, 262161, 0, 65541, 262162, 0, 65541, 262163, 0, 65537, 262164, 0, 65539, 262165, 0, 65539, 262166, 0, 65539, 262167, 0, 65539, 262168, 0, 65538, 262169, 0, 65539, 262170, 0, 65540, 262171, 0, 65541, 262172, 0, 65541, 262173, 0, 65541, 327680, 0, 65541, 327681, 0, 5, 327682, 0, 393220, 327683, 0, 196609, 327684, 1, 131072, 327685, 1, 131072, 327686, 1, 131072, 327687, 1, 131072, 327688, 1, 131072, 327689, 1, 131072, 327690, 1, 131072, 327691, 0, 131076, 327692, 0, 393220, 327693, 0, 393220, 327694, 0, 65541, 327695, 0, 65541, 327696, 0, 65541, 327697, 0, 65541, 327698, 0, 65541, 327699, 0, 131073, 327700, 2, 0, 327701, 1, 131072, 327702, 1, 131072, 327703, 1, 131072, 327704, 1, 131072, 327705, 2, 1, 327706, 0, 131076, 327707, 0, 65541, 327708, 0, 65541, 327709, 0, 65541, 393216, 0, 65541, 393217, 0, 393220, 393218, 0, 393220, 393219, 0, 131073, 393220, 0, 262147, 393221, 0, 262147, 393222, 0, 262147, 393223, 0, 131074, 393224, 0, 262146, 393225, 0, 262147, 393226, 0, 262147, 393227, 0, 196612, 393228, 0, 393220, 393229, 0, 393220, 393230, 0, 65541, 393231, 0, 65541, 393232, 0, 65541, 393233, 0, 65541, 393234, 0, 65541, 393235, 0, 196609, 393236, 2, 131073, 393237, 0, 131075, 393238, 0, 196611, 393239, 0, 131075, 393240, 0, 131074, 393241, 2, 196609, 393242, 0, 131076, 393243, 0, 65541, 393244, 0, 65541, 393245, 0, 65541, 458752, 0, 65541, 458753, 0, 3, 458754, 0, 393220, 458755, 0, 262145, 458756, 0, 262147, 458757, 0, 262147, 458758, 0, 262147, 458759, 0, 262147, 458760, 0, 262147, 458761, 0, 262147, 458762, 0, 262147, 458763, 0, 131075, 458764, 0, 65539, 458765, 0, 65539, 458766, 0, 65539, 458767, 0, 65539, 458768, 0, 65539, 458769, 0, 65539, 458770, 0, 65539, 458771, 0, 131075, 458772, 2, 131073, 458773, 0, 131075, 458774, 0, 131075, 458775, 0, 131075, 458776, 0, 131075, 458777, 2, 196609, 458778, 0, 131076, 458779, 0, 65541, 458780, 0, 65541, 458781, 0, 65541, 524288, 0, 65541, 524289, 0, 393220, 524290, 0, 393220, 524291, 0, 262145, 524292, 0, 262147, 524293, 0, 262147, 524294, 0, 262147, 524295, 0, 262147, 524296, 0, 262147, 524297, 0, 262147, 524298, 0, 262147, 524299, 0, 196611, 524300, 0, 131075, 524301, 0, 131075, 524302, 0, 131075, 524303, 0, 131075, 524304, 0, 131075, 524305, 0, 131075, 524306, 0, 131075, 524307, 0, 131075, 524308, 2, 131073, 524309, 0, 131075, 524310, 0, 131075, 524311, 0, 131075, 524312, 0, 131075, 524313, 2, 196609, 524314, 0, 131076, 524315, 0, 65541, 524316, 0, 65541, 524317, 0, 65541, 589824, 0, 65541, 589825, 0, 393220, 589826, 0, 393220, 589827, 0, 196609, 589828, 0, 262147, 589829, 0, 262147, 589830, 0, 262147, 589831, 0, 262147, 589832, 0, 262147, 589833, 0, 196611, 589834, 0, 262147, 589835, 0, 131075, 589836, 0, 327683, 589837, 0, 327682, 589838, 0, 327682, 589839, 0, 327682, 589840, 0, 327682, 589841, 0, 327682, 589842, 0, 327682, 589843, 0, 131075, 589844, 2, 131073, 589845, 0, 131075, 589846, 0, 131075, 589847, 0, 131075, 589848, 0, 131075, 589849, 2, 196609, 589850, 0, 131076, 589851, 0, 65541, 589852, 0, 65541, 589853, 0, 65541, 655360, 0, 65541, 655361, 0, 393220, 655362, 0, 393220, 655363, 0, 262145, 655364, 0, 262147, 655365, 0, 262147, 655366, 0, 262147, 655367, 0, 262147, 655368, 0, 262147, 655369, 0, 262147, 655370, 0, 262147, 655371, 0, 131076, 655372, 0, 393220, 655373, 0, 393220, 655374, 0, 65541, 655375, 0, 65541, 655376, 0, 65541, 655377, 0, 65541, 655378, 0, 65541, 655379, 0, 196609, 655380, 2, 196609, 655381, 0, 131075, 655382, 0, 131075, 655383, 0, 131075, 655384, 0, 131075, 655385, 2, 196609, 655386, 0, 196612, 655387, 0, 65541, 655388, 0, 65541, 655389, 0, 65541, 720896, 0, 65541, 720897, 0, 5, 720898, 0, 393220, 720899, 0, 262145, 720900, 0, 262147, 720901, 0, 262146, 720902, 0, 262147, 720903, 0, 262147, 720904, 0, 262147, 720905, 0, 262147, 720906, 0, 262147, 720907, 0, 196612, 720908, 0, 393220, 720909, 0, 393220, 720910, 0, 65541, 720911, 0, 65541, 720912, 0, 65541, 720913, 0, 65541, 720914, 0, 65541, 720915, 0, 262145, 720916, 2, 65536, 720917, 1, 131073, 720918, 1, 131073, 720919, 1, 131073, 720920, 1, 131073, 720921, 2, 65537, 720922, 0, 262148, 720923, 0, 65541, 720924, 0, 65541, 720925, 0, 65541, 786432, 0, 65541, 786433, 0, 393220, 786434, 0, 393220, 786435, 0, 327681, 786436, 0, 327682, 786437, 0, 327682, 786438, 0, 327683, 786439, 0, 327682, 786440, 0, 327682, 786441, 0, 327682, 786442, 0, 327682, 786443, 0, 327684, 786444, 0, 393220, 786445, 0, 393220, 786446, 0, 65541, 786447, 0, 65541, 786448, 0, 65541, 786449, 0, 65541, 786450, 0, 65541, 786451, 0, 327681, 786452, 0, 327683, 786453, 0, 327682, 786454, 0, 327683, 786455, 0, 327682, 786456, 0, 327683, 786457, 0, 327682, 786458, 0, 327684, 786459, 0, 65541, 786460, 0, 65541, 786461, 0, 65541, 851968, 0, 65541, 851969, 0, 393220, 851970, 0, 393217, 851971, 0, 393220, 851972, 0, 393220, 851973, 0, 393220, 851974, 0, 393220, 851975, 0, 393220, 851976, 0, 393220, 851977, 0, 393220, 851978, 0, 393220, 851979, 0, 393220, 851980, 0, 393220, 851981, 0, 393220, 851982, 0, 65541, 851983, 0, 65541, 851984, 0, 65541, 851985, 0, 65541, 851986, 0, 65541, 851987, 0, 65541, 851988, 0, 65541, 851989, 0, 65541, 851990, 0, 65541, 851991, 0, 65541, 851992, 0, 65541, 851993, 0, 65541, 851994, 0, 65541, 851995, 0, 65541, 851996, 0, 65541, 851997, 0, 65541, 917504, 0, 65541, 917505, 0, 393220, 917506, 0, 393220, 917507, 0, 393220, 917508, 0, 393220, 917509, 0, 393221, 917510, 0, 393220, 917511, 0, 393220, 917512, 0, 393220, 917513, 0, 393220, 917514, 0, 393220, 917515, 0, 393220, 917516, 0, 393220, 917517, 0, 393220, 917518, 0, 65541, 917519, 0, 65541, 917520, 0, 65541, 917521, 0, 65541, 917522, 0, 65541, 917523, 0, 65541, 917524, 0, 65541, 917525, 0, 65541, 917526, 0, 65541, 917527, 0, 65541, 917528, 0, 65541, 917529, 0, 65541, 917530, 0, 65541, 917531, 0, 65541, 917532, 0, 65541, 917533, 0, 65541, 983040, 0, 65541, 983041, 0, 393220, 983042, 0, 393220, 983043, 0, 393220, 983044, 0, 393220, 983045, 0, 393220, 983046, 0, 393220, 983047, 0, 327680, 983048, 0, 393220, 983049, 0, 393220, 983050, 0, 4, 983051, 0, 4, 983052, 0, 4, 983053, 0, 4, 983054, 0, 4, 983055, 0, 65541, 983056, 0, 65541, 983057, 0, 65541, 983058, 0, 65541, 983059, 0, 65541, 983060, 0, 65541, 983061, 0, 65541, 983062, 0, 65541, 983063, 0, 65541, 983064, 0, 65541, 983065, 0, 65541, 983066, 0, 65541, 983067, 0, 65541, 983068, 0, 65541, 983069, 0, 65541, 1114111, 0, 4, 1048576, 0, 4, 1048577, 0, 4, 1048578, 0, 4, 1048579, 0, 4, 1048580, 0, 4, 1048581, 0, 4, 1048582, 0, 4, 1048583, 0, 4, 1048584, 0, 4, 1048585, 0, 4, 1048586, 0, 4, 1048587, 0, 4, 1048588, 0, 4, 1048589, 0, 4, 1048590, 0, 4, 1048591, 0, 4, 1048592, 0, 4, 1048593, 0, 4, 1048594, 0, 4, 1048595, 0, 4, 1048596, 0, 4, 1048597, 0, 4, 1048598, 0, 4, 1048599, 0, 4, 1048600, 0, 4, 1048601, 0, 65541, 1048602, 0, 3, 1048603, 0, 393220, 1048604, 0, 4, 1048605, 0, 4, 1114112, 0, 4, 1114113, 0, 4, 1114114, 0, 4, 1114115, 0, 4, 1114116, 0, 4, 1114117, 0, 4, 1114118, 0, 4, 1114119, 0, 4, 1114120, 0, 4, 1114121, 0, 4, 1114122, 0, 4, 1114123, 0, 4, 1114124, 0, 4, 1114125, 0, 4, 1114126, 0, 4, 1114127, 0, 4, 1114128, 0, 4, 1114129, 0, 4, 1114130, 0, 4, 1114131, 0, 4, 1114132, 0, 4, 1114133, 0, 4, 1114134, 0, 4, 1114135, 0, 4, 1114136, 0, 4, 1114137, 0, 4, 1114138, 0, 4, 1114139, 0, 4, 1114140, 0, 4, 1114141, 0, 4 )
+
+[node name="Trees" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 33, 40 )
+
+[node name="Trees2" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 43, 41 )
+
+[node name="Trees5" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 53, 40 )
+
+[node name="Trees6" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 78, 41 )
+
+[node name="Trees8" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 129, 40 )
+
+[node name="Trees12" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 142, 41 )
+
+[node name="Trees13" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 155, 40 )
+
+[node name="Trees14" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 168, 41 )
+
+[node name="Trees15" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 182, 41 )
+
+[node name="Trees16" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 195, 42 )
+
+[node name="Trees17" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 210, 42 )
+
+[node name="Trees9" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 116, 40 )
+
+[node name="Trees10" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 104, 41 )
+
+[node name="Trees11" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 91, 40 )
+
+[node name="Trees7" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 66, 40 )
+
+[node name="Trees3" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 11, 41 )
+
+[node name="Trees4" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 24, 41 )
+
+[node name="Trees18" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 244, 41 )
+
+[node name="Trees19" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 254, 42 )
+
+[node name="Trees20" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 264, 41 )
+
+[node name="Trees21" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 289, 42 )
+
+[node name="Trees22" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 340, 41 )
+
+[node name="Trees23" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 353, 42 )
+
+[node name="Trees24" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 366, 41 )
+
+[node name="Trees25" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 379, 42 )
+
+[node name="Trees26" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 393, 42 )
+
+[node name="Trees27" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 406, 43 )
+
+[node name="Trees28" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 421, 43 )
+
+[node name="Trees35" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 435, 43 )
+
+[node name="Trees36" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 448, 44 )
+
+[node name="Trees37" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 463, 44 )
+
+[node name="Trees38" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 477, 44 )
+
+[node name="Trees39" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 55 )
+
+[node name="Trees40" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 55 )
+rotation = 0.0375151
+
+[node name="Trees41" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 479, 70 )
+rotation = 0.0375151
+
+[node name="Trees42" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 88 )
+rotation = 0.0375151
+
+[node name="Trees43" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 108 )
+rotation = 0.0375151
+
+[node name="Trees44" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 108 )
+rotation = 0.0375151
+
+[node name="Trees45" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 479, 128 )
+rotation = 0.0375151
+
+[node name="Trees46" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 479, 151 )
+rotation = 0.0375151
+
+[node name="Trees47" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 165 )
+rotation = 0.0375151
+
+[node name="Trees48" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 187 )
+rotation = 0.0375151
+
+[node name="Trees49" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 201 )
+rotation = 0.0375151
+
+[node name="Trees50" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 477, 217 )
+rotation = 0.0375151
+
+[node name="Trees93" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 2, 56 )
+
+[node name="Trees94" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 67 )
+
+[node name="Trees95" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 67 )
+rotation = 0.0375151
+
+[node name="Trees96" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 4, 82 )
+rotation = 0.0375151
+
+[node name="Trees97" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 100 )
+rotation = 0.0375151
+
+[node name="Trees98" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 120 )
+rotation = 0.0375151
+
+[node name="Trees99" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 120 )
+rotation = 0.0375151
+
+[node name="Trees100" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 4, 140 )
+rotation = 0.0375151
+
+[node name="Trees101" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 4, 163 )
+rotation = 0.0375151
+
+[node name="Trees102" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 177 )
+rotation = 0.0375151
+
+[node name="Trees103" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 199 )
+rotation = 0.0375151
+
+[node name="Trees104" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 213 )
+rotation = 0.0375151
+
+[node name="Trees105" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 3, 228 )
+rotation = 0.0375151
+
+[node name="Trees51" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 477, 230 )
+rotation = 0.0375151
+
+[node name="Trees52" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 476, 247 )
+rotation = 0.0375151
+
+[node name="Trees53" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 252 )
+rotation = 0.0375151
+
+[node name="Trees54" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 478, 266 )
+rotation = 0.0375151
+
+[node name="Trees56" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 466, 272 )
+rotation = 0.0375151
+
+[node name="Trees29" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 327, 41 )
+
+[node name="Trees30" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 315, 42 )
+
+[node name="Trees31" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 302, 41 )
+
+[node name="Trees32" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 277, 41 )
+
+[node name="Trees33" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 222, 42 )
+
+[node name="Trees34" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 235, 42 )
+
+[node name="Trees55" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 21, 268 )
+
+[node name="Trees57" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 31, 269 )
+
+[node name="Trees58" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 41, 268 )
+
+[node name="Trees59" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 66, 269 )
+
+[node name="Trees60" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 117, 268 )
+
+[node name="Trees61" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 130, 269 )
+
+[node name="Trees62" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 143, 268 )
+
+[node name="Trees63" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 156, 269 )
+
+[node name="Trees64" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 170, 269 )
+
+[node name="Trees65" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 183, 270 )
+
+[node name="Trees66" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 198, 270 )
+
+[node name="Trees67" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 104, 268 )
+
+[node name="Trees68" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 92, 269 )
+
+[node name="Trees69" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 79, 268 )
+
+[node name="Trees70" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 54, 268 )
+
+[node name="Trees71" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( -1, 269 )
+
+[node name="Trees72" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 12, 269 )
+
+[node name="Trees73" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 232, 269 )
+
+[node name="Trees74" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 242, 270 )
+
+[node name="Trees75" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 252, 269 )
+
+[node name="Trees76" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 277, 270 )
+
+[node name="Trees77" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 328, 269 )
+
+[node name="Trees78" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 341, 270 )
+
+[node name="Trees79" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 354, 269 )
+
+[node name="Trees80" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 367, 270 )
+
+[node name="Trees81" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 381, 270 )
+
+[node name="Trees82" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 394, 271 )
+
+[node name="Trees83" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 409, 271 )
+
+[node name="Trees84" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 423, 271 )
+
+[node name="Trees85" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 436, 272 )
+
+[node name="Trees86" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 451, 272 )
+
+[node name="Trees87" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 315, 269 )
+
+[node name="Trees88" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 303, 270 )
+
+[node name="Trees89" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 290, 269 )
+
+[node name="Trees90" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 265, 269 )
+
+[node name="Trees91" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 210, 270 )
+
+[node name="Trees92" parent="Ground Textures" instance=ExtResource( 4 )]
+position = Vector2( 223, 270 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 84, 72 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Enemy1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 71, 139 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 118, 185 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 169, 140 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 361, 153 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 360, 120 )
+
+[node name="Cover" parent="." instance=ExtResource( 5 )]
+tile_data = PoolIntArray( 393237, 0, 0, 393238, 0, 1, 393239, 0, 1, 393240, 0, 2, 458773, 0, 65538, 458776, 0, 65538, 524309, 0, 65538, 589845, 0, 65536, 589848, 0, 65538, 655381, 0, 131072, 655382, 0, 131073, 655383, 0, 131073, 655384, 0, 131074 )
