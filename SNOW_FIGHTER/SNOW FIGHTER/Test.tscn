@@ -1,0 +1,250 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Snowspot/Snowspot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Walls/Wall05Top.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Walls/Wall01TLCorner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Walls/Wall08Right.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Walls/Wall07Left.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Walls/Wall02TRCorner.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Walls/Wall03BLCorner.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Walls/Wall06Bottom.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Walls/Wall04BRCorner.tscn" type="PackedScene" id=11]
+
+[node name="Level" type="Node2D"]
+position = Vector2( 96, 32 )
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 0, 0, 393220, 1, 0, 2, 2, 0, 393220, 3, 0, 393220, 4, 0, 2, 5, 0, 393220, 6, 0, 393220, 7, 0, 393220, 8, 0, 2, 9, 0, 393220, 10, 0, 1, 11, 0, 393220, 12, 0, 5, 13, 0, 2, 14, 0, 393220, 15, 0, 393220, 65536, 0, 2, 65537, 0, 393220, 65538, 0, 1, 65539, 0, 2, 65540, 0, 393220, 65541, 0, 1, 65542, 0, 1, 65543, 0, 2, 65544, 0, 1, 65545, 0, 393220, 65546, 0, 2, 65547, 0, 393220, 65548, 0, 393220, 65549, 0, 2, 65550, 0, 393220, 65551, 0, 393220, 131072, 0, 5, 131073, 0, 5, 131074, 0, 393220, 131075, 0, 1, 131076, 0, 393220, 131077, 0, 2, 131078, 0, 393220, 131079, 0, 393220, 131080, 0, 5, 131081, 0, 1, 131082, 0, 5, 131083, 0, 393220, 131084, 0, 1, 131085, 0, 393220, 131086, 0, 393220, 131087, 0, 5, 196608, 0, 4, 196609, 0, 4, 196610, 0, 65537, 196611, 0, 65538, 196612, 0, 65540, 196613, 0, 393216, 196614, 0, 65537, 196615, 0, 65538, 196616, 0, 65538, 196617, 0, 65538, 196618, 0, 65538, 196619, 0, 65538, 196620, 0, 65538, 196621, 0, 65540, 196622, 0, 4, 196623, 0, 4, 262144, 0, 4, 262145, 0, 4, 262146, 0, 131073, 262147, 0, 131075, 262148, 0, 262148, 262149, 0, 393216, 262150, 0, 131073, 262151, 0, 196611, 262152, 0, 131075, 262153, 0, 327683, 262154, 0, 327683, 262155, 0, 131075, 262156, 0, 131075, 262157, 0, 131076, 262158, 0, 4, 262159, 0, 4, 327680, 0, 65538, 327681, 0, 65538, 327682, 0, 131075, 327683, 0, 131075, 327684, 0, 131075, 327685, 0, 65538, 327686, 0, 131075, 327687, 0, 131075, 327688, 0, 262148, 327689, 0, 327680, 327690, 0, 393216, 327691, 0, 131073, 327692, 0, 131075, 327693, 0, 327682, 327694, 0, 65538, 327695, 0, 65538, 393216, 0, 131075, 393217, 0, 131075, 393218, 0, 196611, 393219, 0, 131075, 393220, 0, 196611, 393221, 0, 131074, 393222, 0, 131075, 393223, 0, 196611, 393224, 0, 262148, 393225, 0, 393217, 393226, 0, 327680, 393227, 0, 131073, 393228, 0, 262148, 393229, 0, 0, 393230, 0, 196609, 393231, 0, 131075, 458752, 0, 131075, 458753, 0, 196611, 458754, 0, 196611, 458755, 0, 131075, 458756, 0, 131075, 458757, 0, 131075, 458758, 0, 131075, 458759, 0, 131075, 458760, 0, 131075, 458761, 0, 65538, 458762, 0, 65538, 458763, 0, 131075, 458764, 0, 262148, 458765, 0, 393216, 458766, 0, 196609, 458767, 0, 131075, 524288, 0, 327683, 524289, 0, 327683, 524290, 0, 131075, 524291, 0, 131075, 524292, 0, 131074, 524293, 0, 131075, 524294, 0, 131075, 524295, 0, 327683, 524296, 0, 196611, 524297, 0, 131075, 524298, 0, 131075, 524299, 0, 131075, 524300, 0, 131075, 524301, 0, 65538, 524302, 0, 327683, 524303, 0, 327683, 589824, 0, 4, 589825, 0, 4, 589826, 0, 262145, 589827, 0, 131075, 589828, 0, 131075, 589829, 0, 131075, 589830, 0, 262148, 589831, 0, 327680, 589832, 0, 131073, 589833, 0, 131075, 589834, 0, 196611, 589835, 0, 131075, 589836, 0, 131075, 589837, 0, 131076, 589838, 0, 4, 589839, 0, 4, 655360, 0, 4, 655361, 0, 4, 655362, 0, 262145, 655363, 0, 327683, 655364, 0, 327683, 655365, 0, 327683, 655366, 0, 262148, 655367, 0, 393217, 655368, 0, 131073, 655369, 0, 327683, 655370, 0, 327683, 655371, 0, 327683, 655372, 0, 327683, 655373, 0, 131076, 655374, 0, 4, 655375, 0, 4, 720896, 0, 1, 720897, 0, 393220, 720898, 0, 393220, 720899, 0, 1, 720900, 0, 1, 720901, 0, 393220, 720902, 0, 393220, 720903, 0, 0, 720904, 0, 1, 720905, 0, 3, 720906, 0, 3, 720907, 0, 0, 720908, 0, 1, 720909, 0, 393220, 720910, 0, 3, 720911, 0, 393220, 786432, 0, 393220, 786433, 0, 1, 786434, 0, 3, 786435, 0, 0, 786436, 0, 1, 786437, 0, 3, 786438, 0, 1, 786439, 0, 3, 786440, 0, 3, 786441, 0, 1, 786442, 0, 393220, 786443, 0, 0, 786444, 0, 3, 786445, 0, 393220, 786446, 0, 3, 786447, 0, 3, 851968, 0, 393220, 851969, 0, 393220, 851970, 0, 3, 851971, 0, 5, 851972, 0, 393220, 851973, 0, 393220, 851974, 0, 393220, 851975, 0, 3, 851976, 0, 1, 851977, 0, 393220, 851978, 0, 393220, 851979, 0, 393220, 851980, 0, 1, 851981, 0, 393220, 851982, 0, 3, 851983, 0, 3 )
+
+[node name="Snowspots" type="Node2D" parent="."]
+visible = false
+
+[node name="Snowspot" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 0, 51 )
+scale = Vector2( 0.204356, 0.389284 )
+
+[node name="Snowspot2" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 144, 80 )
+scale = Vector2( 0.204356, 0.389284 )
+
+[node name="Snowspot3" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 1.52588e-05, 142 )
+scale = Vector2( 0.204356, 0.389284 )
+
+[node name="Snowspot4" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 110, 141 )
+scale = Vector2( 0.122167, 0.389284 )
+
+[node name="Snowspot8" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 78, 53 )
+scale = Vector2( 0.122167, 0.389284 )
+
+[node name="Snowspot5" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 223, 142 )
+scale = Vector2( 0.204356, 0.389284 )
+
+[node name="Snowspot6" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 207, 97 )
+scale = Vector2( 0.124353, 0.389284 )
+
+[node name="Snowspot7" parent="Snowspots" instance=ExtResource( 3 )]
+position = Vector2( 223, 51 )
+scale = Vector2( 0.204356, 0.389284 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 114, 97 )
+
+[node name="WallTRCorner3" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 32, 54 )
+
+[node name="WallRight2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 29, 63 )
+
+[node name="WallBRCorner2" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 16, 176 )
+
+[node name="WallBLCorner3" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 224, 171 )
+
+[node name="WallTLCorner2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 224, 53 )
+
+[node name="WallLeft" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 116, 143 )
+
+[node name="WallLeft3" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 227, 63 )
+
+[node name="WallLeft2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 228, 144 )
+
+[node name="WallRight" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 93, 63 )
+
+[node name="WallRight3" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 29, 143 )
+
+[node name="WallBottom" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 8, 176 )
+
+[node name="WallBottom3" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 32, 0 )
+
+[node name="WallBottom4" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 48, 0 )
+
+[node name="WallBottom5" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 64, 0 )
+
+[node name="WallBottom6" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 80, 0 )
+
+[node name="WallBottom7" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 96, 0 )
+
+[node name="WallBottom9" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 128, 0 )
+
+[node name="WallBottom10" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 144, 0 )
+
+[node name="WallBottom11" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 160, 0 )
+
+[node name="WallBottom12" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 176, 0 )
+
+[node name="WallBottom13" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 192, 0 )
+
+[node name="WallBottom14" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 208, 0 )
+
+[node name="WallBottom16" parent="YSort/WallBottom" instance=ExtResource( 10 )]
+position = Vector2( 240, 0 )
+
+[node name="WallTop" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 8, 52 )
+
+[node name="WallTop3" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 32, 0 )
+
+[node name="WallTop4" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 48, 0 )
+
+[node name="WallTop5" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 64, 0 )
+
+[node name="WallTop7" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 96, 0 )
+
+[node name="WallTop8" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 112, 0 )
+
+[node name="WallTop9" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 128, 0 )
+
+[node name="WallTop10" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 144, 0 )
+
+[node name="WallTop11" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 160, 0 )
+
+[node name="WallTop12" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 176, 0 )
+
+[node name="WallTop13" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 192, 0 )
+
+[node name="WallTop14" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 208, 0 )
+
+[node name="WallTop16" parent="YSort/WallTop" instance=ExtResource( 4 )]
+position = Vector2( 240, 0 )
+
+[node name="WallTLCorner" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 144, 85 )
+
+[node name="WallTRCorner" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 176, 86 )
+
+[node name="WallTRCorner2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 96, 54 )
+
+[node name="WallBLCorner" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 144, 106 )
+
+[node name="WallBLCorner2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 112, 170 )
+
+[node name="WallBRCorner" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 160, 112 )
+
+[node name="Snowspot" parent="." instance=ExtResource( 3 )]
+position = Vector2( 14, 68 )
+scale = Vector2( 1.69427, 1.33562 )
+
+[node name="Snowspot7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 242, 67 )
+scale = Vector2( 1.69427, 1.33562 )
+
+[node name="Snowspot8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 242, 156 )
+scale = Vector2( 1.69427, 1.33562 )
+
+[node name="Snowspot2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 14, 156 )
+scale = Vector2( 1.69427, 1.33562 )
+
+[node name="Snowspot3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 160, 95 )
+scale = Vector2( 1.69427, 1.33562 )
+
+[node name="Snowspot4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 86, 67 )
+scale = Vector2( 0.801128, 1.40371 )
+
+[node name="Snowspot5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 124, 156 )
+scale = Vector2( 0.801128, 1.40371 )
+
+[node name="Snowspot6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 216, 112 )
+scale = Vector2( 1.04113, 1.8037 )
+
+[connection signal="body_entered" from="Snowspots/Snowspot" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspots/Snowspot2" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot2" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspots/Snowspot3" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot3" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspots/Snowspot4" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot4" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspots/Snowspot8" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot8" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspots/Snowspot5" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot5" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspots/Snowspot6" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot6" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspots/Snowspot7" to="YSort/Player" method="_entered_snowspot"]
+[connection signal="body_exited" from="Snowspots/Snowspot7" to="YSort/Player" method="_exited_snowspot"]
+[connection signal="body_entered" from="Snowspot" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
+[connection signal="body_entered" from="Snowspot7" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot7" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
+[connection signal="body_entered" from="Snowspot8" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot8" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
+[connection signal="body_entered" from="Snowspot2" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot2" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
+[connection signal="body_entered" from="Snowspot3" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot3" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
+[connection signal="body_entered" from="Snowspot4" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot4" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
+[connection signal="body_entered" from="Snowspot5" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot5" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
+[connection signal="body_entered" from="Snowspot6" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
+[connection signal="body_exited" from="Snowspot6" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
