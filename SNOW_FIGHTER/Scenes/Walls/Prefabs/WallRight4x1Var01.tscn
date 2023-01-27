@@ -7,7 +7,7 @@
 
 [node name="WallRight4x1" type="StaticBody2D"]
 collision_layer = 8
-collision_mask = 39
+collision_mask = 0
 
 [node name="008-Right13" type="Sprite" parent="."]
 position = Vector2( 2.8, 72.4 )
@@ -42,7 +42,6 @@ position = Vector2( 7.3, 48.4 )
 polygon = PoolVector2Array( -22.5, -52, -22.5, -56, -8.5, -56, -8.5, -52, -7.5, -48, -3.5, -46, 3.5, -47, 3.5, 32, -3.5, 32, -3.5, -43, -10.5, -42, -11.5, -50, -13.5, -52 )
 
 [node name="WallProximity" type="Area2D" parent="."]
-visible = false
 position = Vector2( 6.8, 48.4 )
 scale = Vector2( 1.08939, 3.1817 )
 collision_layer = 16
@@ -50,7 +49,7 @@ collision_mask = 3
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="WallProximity"]
-position = Vector2( 0.458972, 0 )
+position = Vector2( 2.01948, -0.125717 )
 scale = Vector2( 0.917945, 0.314297 )
 polygon = PoolVector2Array( -22.5, -44, -22.5, -61, -8.5, -60, 3.5, -55, 7.5, -47, 7.5, 32, -8.5, 32, -8.5, -32, -13.5, -33, -16.5, -37, -21.5, -38 )
 
