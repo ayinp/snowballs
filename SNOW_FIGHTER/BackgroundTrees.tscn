@@ -1,0 +1,1058 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Trees/Tree02.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Trees/Tree01.tscn" type="PackedScene" id=2]
+
+[node name="Background Trees" type="Node2D"]
+
+[node name="Tree01" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree02" type="KinematicBody2D" parent="Tree01" instance=ExtResource( 2 )]
+position = Vector2( -16, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree03" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree02" type="KinematicBody2D" parent="Tree03" instance=ExtResource( 2 )]
+position = Vector2( 32, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree03" type="KinematicBody2D" parent="Tree03" instance=ExtResource( 2 )]
+position = Vector2( 80, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree28" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree11" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 232, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree02" type="KinematicBody2D" parent="Tree11" instance=ExtResource( 2 )]
+position = Vector2( 32, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree03" type="KinematicBody2D" parent="Tree11" instance=ExtResource( 2 )]
+position = Vector2( 80, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree04" type="KinematicBody2D" parent="Tree11" instance=ExtResource( 2 )]
+position = Vector2( 96, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree05" type="KinematicBody2D" parent="Tree11" instance=ExtResource( 2 )]
+position = Vector2( 112, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree07" type="KinematicBody2D" parent="Tree11" instance=ExtResource( 2 )]
+position = Vector2( 104, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree06" type="KinematicBody2D" parent="Tree11" instance=ExtResource( 2 )]
+position = Vector2( 192, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree08" type="KinematicBody2D" parent="Tree11" instance=ExtResource( 2 )]
+position = Vector2( 112, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree02" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree23" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree25" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree27" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree26" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree04" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 88, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree07" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree05" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree32" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree33" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree10" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 216, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree14" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 216, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree13" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 280, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree15" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 296, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree16" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 360, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree53" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 352, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree54" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 352, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree17" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 376, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree55" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 368, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree18" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree56" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree19" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 408, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree20" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 440, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree21" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 456, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree60" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree22" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 472, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree65" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 472, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree68" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 480, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree12" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 248, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree06" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree09" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree08" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 184, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree29" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree30" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 48, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree31" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 80, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree34" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree24" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree35" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 32 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree36" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree37" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 144, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree49" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 272, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree43" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree39" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 112, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree40" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree42" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree44" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 176, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree45" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree46" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 208, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree47" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 240, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree50" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree51" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 304, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree52" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree48" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 256, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree41" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree38" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 56 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree08" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 2 )]
+position = Vector2( 392, -56 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree40" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree41" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree42" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree43" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 32 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree44" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree45" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree46" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree47" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 1 )]
+position = Vector2( 0, 56 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree09" type="KinematicBody2D" parent="Tree38" instance=ExtResource( 2 )]
+position = Vector2( 400, -48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree57" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 120 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree08" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 2 )]
+position = Vector2( 408, -120 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree40" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree41" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree42" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree43" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 32 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree44" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree45" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree46" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree47" type="KinematicBody2D" parent="Tree57" instance=ExtResource( 1 )]
+position = Vector2( 0, 56 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree59" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 432, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree99" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 456, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree63" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree64" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 472, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree69" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 480, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree75" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 464, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree70" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 496, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree58" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 184 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree67" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 192 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree61" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 200 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree62" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 208 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree66" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 216 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree71" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 224 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree72" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 232 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree73" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 240 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree74" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 248 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree60" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( 0, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree61" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( 0, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree62" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( -8, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree70" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -216 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree74" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -224 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree75" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -208 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree73" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( 464, -200 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree72" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( 464, -192 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree76" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -184 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree77" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -176 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree89" type="KinematicBody2D" parent="Tree74/Tree77" instance=ExtResource( 2 )]
+position = Vector2( 0, 112 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree71" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( 464, -168 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree79" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( 464, -56 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree78" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 2 )]
+position = Vector2( 464, -48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree80" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree81" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -32 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree75" type="KinematicBody2D" parent="Tree74/Tree81" instance=ExtResource( 1 )]
+position = Vector2( -448, -208 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree82" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree83" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree84" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, -8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree85" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree86" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree87" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree88" type="KinematicBody2D" parent="Tree74" instance=ExtResource( 1 )]
+position = Vector2( 464, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree78" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 360, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree79" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 360, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree80" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 376, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree81" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree82" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree83" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree84" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 104, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree85" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 168, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree86" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 280, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree87" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 216, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree88" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree89" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree90" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree91" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 184, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree92" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree93" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree95" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 296, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree96" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 312, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree97" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 328, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree100" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 440, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree103" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 112, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree104" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 368, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree105" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 368, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree108" type="KinematicBody2D" parent="Tree105" instance=ExtResource( 2 )]
+position = Vector2( -336, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree109" type="KinematicBody2D" parent="Tree105" instance=ExtResource( 2 )]
+position = Vector2( -352, 0 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree106" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree108" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree110" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 32 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree134" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree107" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree109" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 48, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree111" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 176, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree112" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 288, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree113" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree114" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree115" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 144, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree119" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree120" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 32 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree124" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree126" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree116" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree117" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree118" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 208, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree121" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 304, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree122" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree123" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 336, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree127" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 56 )
+collision_layer = 8
+collision_mask = 7
+input_pickable = true
+
+[node name="Tree128" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 64 )
+collision_layer = 8
+collision_mask = 7
+input_pickable = true
+
+[node name="Tree129" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 72 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree130" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 80 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree131" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 88 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree132" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 96 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree133" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 104 )
+collision_layer = 8
+collision_mask = 7
+input_pickable = true
+
+[node name="Tree134" type="KinematicBody2D" parent="Tree133" instance=ExtResource( 1 )]
+position = Vector2( 0, 8 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree135" type="KinematicBody2D" parent="Tree133" instance=ExtResource( 1 )]
+position = Vector2( 0, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree136" type="KinematicBody2D" parent="Tree133" instance=ExtResource( 1 )]
+position = Vector2( 0, 24 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree137" type="KinematicBody2D" parent="Tree133" instance=ExtResource( 1 )]
+position = Vector2( 0, 32 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree138" type="KinematicBody2D" parent="Tree133" instance=ExtResource( 1 )]
+position = Vector2( 0, 40 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree139" type="KinematicBody2D" parent="Tree133" instance=ExtResource( 1 )]
+position = Vector2( 0, 48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree140" type="KinematicBody2D" parent="Tree133" instance=ExtResource( 1 )]
+position = Vector2( 0, 56 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree125" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 448, 16 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree135" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 392, 48 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree136" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 392, 56 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree137" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 392, 64 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree138" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 392, 72 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree139" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 392, 80 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree140" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 88 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree141" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 96 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree142" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 104 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree143" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 112 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree144" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 120 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree145" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 128 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree146" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 136 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree147" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 144 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree148" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 152 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree149" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 160 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree150" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 168 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree151" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 176 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree152" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 184 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree153" type="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 192 )
+collision_layer = 8
+collision_mask = 7
+
+[node name="Tree76" type="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 16 )
+collision_layer = 8
+collision_mask = 7
