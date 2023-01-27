@@ -104,8 +104,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 6, 2 )
+[sub_resource type="CapsuleShape2D" id=26]
+radius = 4.0
+height = 4.0
 
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 6, 8 )
@@ -124,8 +125,8 @@ animation = "idle_down"
 playing = true
 
 [node name="Bounding Box" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource( 10 )
+rotation = -1.5708
+shape = SubResource( 26 )
 
 [node name="Snowball-Point" type="Node2D" parent="."]
 position = Vector2( 4, -3 )
