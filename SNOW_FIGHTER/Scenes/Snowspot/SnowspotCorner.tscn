@@ -1,11 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Snowspot/Snowspot.gd" type="Script" id=1]
 
 [sub_resource type="GradientTexture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 8 )
 
 [node name="Snowspot" type="Area2D"]
 script = ExtResource( 1 )
@@ -16,8 +13,9 @@ position = Vector2( -8.9407e-08, -2.38419e-07 )
 scale = Vector2( 0.0078125, 18 )
 texture = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 8, 8 )
+polygon = PoolVector2Array( -8, -40, -8, -8, -24, -8, -24, 8, -24, 24, 8, 24, 8, -40 )
 
 [connection signal="body_entered" from="." to="." method="_on_Snowspot_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Snowspot_body_exited"]

@@ -46,7 +46,7 @@ visible = false
 shape = SubResource( 5 )
 
 [node name="Snowball-Point" type="Node2D" parent="."]
-position = Vector2( 11, 2 )
+position = Vector2( 6, 4 )
 
 [node name="hurtbox" type="Area2D" parent="."]
 visible = false
@@ -59,6 +59,9 @@ modulate = Color( 0.490196, 0.262745, 0.262745, 1 )
 position = Vector2( 1, 0 )
 shape = SubResource( 6 )
 
+[node name="LastThrow" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
 [connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
 [connection signal="body_entered" from="hurtbox" to="hurtbox" method="_on_hurtbox_body_entered"]
+[connection signal="timeout" from="LastThrow" to="." method="_on_LastThrow_timeout"]

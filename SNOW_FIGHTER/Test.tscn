@@ -56,7 +56,7 @@ scale = Vector2( 0.204356, 0.389284 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 114, 97 )
+position = Vector2( -29, 112 )
 
 [node name="WallTRCorner3" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 32, 54 )
@@ -184,38 +184,6 @@ position = Vector2( 112, 170 )
 [node name="WallBRCorner" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 160, 112 )
 
-[node name="Snowspot" parent="." instance=ExtResource( 3 )]
-position = Vector2( 14, 68 )
-scale = Vector2( 1.69427, 1.33562 )
-
-[node name="Snowspot7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 242, 67 )
-scale = Vector2( 1.69427, 1.33562 )
-
-[node name="Snowspot8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 242, 156 )
-scale = Vector2( 1.69427, 1.33562 )
-
-[node name="Snowspot2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 14, 156 )
-scale = Vector2( 1.69427, 1.33562 )
-
-[node name="Snowspot3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 160, 95 )
-scale = Vector2( 1.69427, 1.33562 )
-
-[node name="Snowspot4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 86, 67 )
-scale = Vector2( 0.801128, 1.40371 )
-
-[node name="Snowspot5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 124, 156 )
-scale = Vector2( 0.801128, 1.40371 )
-
-[node name="Snowspot6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 216, 112 )
-scale = Vector2( 1.04113, 1.8037 )
-
 [connection signal="body_entered" from="Snowspots/Snowspot" to="YSort/Player" method="_entered_snowspot"]
 [connection signal="body_exited" from="Snowspots/Snowspot" to="YSort/Player" method="_exited_snowspot"]
 [connection signal="body_entered" from="Snowspots/Snowspot2" to="YSort/Player" method="_entered_snowspot"]
@@ -232,19 +200,3 @@ scale = Vector2( 1.04113, 1.8037 )
 [connection signal="body_exited" from="Snowspots/Snowspot6" to="YSort/Player" method="_exited_snowspot"]
 [connection signal="body_entered" from="Snowspots/Snowspot7" to="YSort/Player" method="_entered_snowspot"]
 [connection signal="body_exited" from="Snowspots/Snowspot7" to="YSort/Player" method="_exited_snowspot"]
-[connection signal="body_entered" from="Snowspot" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
-[connection signal="body_entered" from="Snowspot7" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot7" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
-[connection signal="body_entered" from="Snowspot8" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot8" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
-[connection signal="body_entered" from="Snowspot2" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot2" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
-[connection signal="body_entered" from="Snowspot3" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot3" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
-[connection signal="body_entered" from="Snowspot4" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot4" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
-[connection signal="body_entered" from="Snowspot5" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot5" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]
-[connection signal="body_entered" from="Snowspot6" to="Snowspots/Snowspot" method="_on_Snowspot_body_entered"]
-[connection signal="body_exited" from="Snowspot6" to="Snowspots/Snowspot" method="_on_Snowspot_body_exited"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Environment/Walls/005-Top.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Walls/WallProximity.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 3 )
@@ -17,3 +18,7 @@ offset = Vector2( 0, 4 )
 visible = false
 position = Vector2( 0, -1 )
 shape = SubResource( 1 )
+
+[node name="WallProximity" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 1 )
+scale = Vector2( 0.799999, 1 )

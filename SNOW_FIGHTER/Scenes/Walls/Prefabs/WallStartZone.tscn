@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Walls/Wall06Bottom.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Walls/Wall01TLCorner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Walls/Wall08Right.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/WallProximity.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Walls/WallProximity.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="StaticBody2D"]
 collision_layer = 8

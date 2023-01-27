@@ -14,7 +14,7 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=1]
 radius = 3.0
 
-[node name="Snowball" type="RigidBody2D"]
+[node name="Snowball" type="RigidBody2D" groups=["snowball"]]
 collision_layer = 4
 collision_mask = 0
 gravity_scale = 0.0
@@ -31,5 +31,10 @@ shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
+[node name="TravelDistance" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_Snowball_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="TravelDistance" to="." method="_on_TravelDistance_timeout"]
