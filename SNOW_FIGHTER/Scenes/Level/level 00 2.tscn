@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Trees/Tree02.tscn" type="PackedScene" id=2]
@@ -11,7 +11,13 @@
 [ext_resource path="res://Scenes/Items/Jacket.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Items/Snowball Pocket.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Items/Snowflake.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallBottom3x1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Walls/Prefabs/WallLevel00Start.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallBottom2x1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Environment/Walls/007-Left.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/WallProximity.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/Environment/Walls/005-Top.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Environment/Walls/001-TLCorner.png" type="Texture" id=18]
 
 [node name="Node" type="Node2D"]
 
@@ -24,683 +30,926 @@ tile_data = PoolIntArray( 0, 0, 4, 1, 0, 4, 2, 0, 4, 3, 0, 4, 4, 0, 4, 5, 0, 4, 
 
 [node name="Tree01" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 40, -8 )
+collision_mask = 39
 
 [node name="Tree02" parent="Background Trees/Tree01" instance=ExtResource( 3 )]
 position = Vector2( -16, 0 )
+collision_mask = 39
 
 [node name="Tree03" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 72, -8 )
+collision_mask = 39
 
 [node name="Tree02" parent="Background Trees/Tree03" instance=ExtResource( 3 )]
 position = Vector2( 32, 0 )
+collision_mask = 39
 
 [node name="Tree03" parent="Background Trees/Tree03" instance=ExtResource( 3 )]
 position = Vector2( 80, 0 )
+collision_mask = 39
 
 [node name="Tree28" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 72, -8 )
+collision_mask = 39
 
 [node name="Tree11" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 232, -8 )
+collision_mask = 39
 
 [node name="Tree02" parent="Background Trees/Tree11" instance=ExtResource( 3 )]
 position = Vector2( 32, 0 )
+collision_mask = 39
 
 [node name="Tree03" parent="Background Trees/Tree11" instance=ExtResource( 3 )]
 position = Vector2( 80, 0 )
+collision_mask = 39
 
 [node name="Tree04" parent="Background Trees/Tree11" instance=ExtResource( 3 )]
 position = Vector2( 96, 0 )
+collision_mask = 39
 
 [node name="Tree05" parent="Background Trees/Tree11" instance=ExtResource( 3 )]
 position = Vector2( 112, 0 )
+collision_mask = 39
 
 [node name="Tree07" parent="Background Trees/Tree11" instance=ExtResource( 3 )]
 position = Vector2( 104, 8 )
+collision_mask = 39
 
 [node name="Tree06" parent="Background Trees/Tree11" instance=ExtResource( 3 )]
 position = Vector2( 192, 0 )
+collision_mask = 39
 
 [node name="Tree08" parent="Background Trees/Tree11" instance=ExtResource( 3 )]
 position = Vector2( 112, 16 )
+collision_mask = 39
 
 [node name="Tree02" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 56, -8 )
+collision_mask = 39
 
 [node name="Tree23" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, -8 )
+collision_mask = 39
 
 [node name="Tree25" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 16, 0 )
+collision_mask = 39
 
 [node name="Tree27" parent="Background Trees" instance=ExtResource( 2 )]
+collision_mask = 39
 
 [node name="Tree26" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
+collision_mask = 39
 
 [node name="Tree04" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 88, -8 )
+collision_mask = 39
 
 [node name="Tree07" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 168, -8 )
+collision_mask = 39
 
 [node name="Tree05" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, -8 )
+collision_mask = 39
 
 [node name="Tree32" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 64, 0 )
+collision_mask = 39
 
 [node name="Tree33" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 96, 0 )
+collision_mask = 39
 
 [node name="Tree10" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 216, -8 )
+collision_mask = 39
 
 [node name="Tree14" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 216, -8 )
+collision_mask = 39
 
 [node name="Tree13" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 280, -8 )
+collision_mask = 39
 
 [node name="Tree15" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 296, -8 )
+collision_mask = 39
 
 [node name="Tree16" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 360, -8 )
+collision_mask = 39
 
 [node name="Tree53" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 352, 0 )
+collision_mask = 39
 
 [node name="Tree54" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 352, 0 )
+collision_mask = 39
 
 [node name="Tree17" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 376, -8 )
+collision_mask = 39
 
 [node name="Tree55" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 368, 0 )
+collision_mask = 39
 
 [node name="Tree18" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, -8 )
+collision_mask = 39
 
 [node name="Tree56" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 384, 0 )
+collision_mask = 39
 
 [node name="Tree19" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 408, -8 )
+collision_mask = 39
 
 [node name="Tree20" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 440, -8 )
+collision_mask = 39
 
 [node name="Tree21" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 456, -8 )
+collision_mask = 39
 
 [node name="Tree60" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 448, 0 )
+collision_mask = 39
 
 [node name="Tree22" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 472, -8 )
+collision_mask = 39
 
 [node name="Tree65" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 472, -8 )
+collision_mask = 39
 
 [node name="Tree68" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 480, 0 )
+collision_mask = 39
 
 [node name="Tree12" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 248, -8 )
+collision_mask = 39
 
 [node name="Tree06" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 136, -8 )
+collision_mask = 39
 
 [node name="Tree09" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 200, -8 )
+collision_mask = 39
 
 [node name="Tree08" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 184, -8 )
+collision_mask = 39
 
 [node name="Tree29" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 32, 0 )
+collision_mask = 39
 
 [node name="Tree30" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 48, 0 )
+collision_mask = 39
 
 [node name="Tree31" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 80, 0 )
+collision_mask = 39
 
 [node name="Tree34" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 0, 16 )
+collision_mask = 39
 
 [node name="Tree24" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 24 )
+collision_mask = 39
 
 [node name="Tree35" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 32 )
+collision_mask = 39
 
 [node name="Tree36" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 40 )
+collision_mask = 39
 
 [node name="Tree37" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 144, 0 )
+collision_mask = 39
 
 [node name="Tree49" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 272, 0 )
+collision_mask = 39
 
 [node name="Tree43" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 224, 0 )
+collision_mask = 39
 
 [node name="Tree39" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 112, 0 )
+collision_mask = 39
 
 [node name="Tree40" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 128, 0 )
+collision_mask = 39
 
 [node name="Tree42" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 160, 0 )
+collision_mask = 39
 
 [node name="Tree44" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 176, 0 )
+collision_mask = 39
 
 [node name="Tree45" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 192, 0 )
+collision_mask = 39
 
 [node name="Tree46" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 208, 0 )
+collision_mask = 39
 
 [node name="Tree47" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 240, 0 )
+collision_mask = 39
 
 [node name="Tree50" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 288, 0 )
+collision_mask = 39
 
 [node name="Tree51" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 304, 0 )
+collision_mask = 39
 
 [node name="Tree52" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 320, 0 )
+collision_mask = 39
 
 [node name="Tree48" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 256, 0 )
+collision_mask = 39
 
 [node name="Tree41" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 8, 48 )
+collision_mask = 39
 
 [node name="Tree38" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 8, 56 )
+collision_mask = 39
 
 [node name="Tree08" parent="Background Trees/Tree38" instance=ExtResource( 3 )]
 position = Vector2( 392, -56 )
+collision_mask = 39
 
 [node name="Tree40" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 8 )
+collision_mask = 39
 
 [node name="Tree41" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 16 )
+collision_mask = 39
 
 [node name="Tree42" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 24 )
+collision_mask = 39
 
 [node name="Tree43" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 32 )
+collision_mask = 39
 
 [node name="Tree44" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 40 )
+collision_mask = 39
 
 [node name="Tree45" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 40 )
+collision_mask = 39
 
 [node name="Tree46" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 48 )
+collision_mask = 39
 
 [node name="Tree47" parent="Background Trees/Tree38" instance=ExtResource( 2 )]
 position = Vector2( 0, 56 )
+collision_mask = 39
 
 [node name="Tree09" parent="Background Trees/Tree38" instance=ExtResource( 3 )]
 position = Vector2( 400, -48 )
+collision_mask = 39
 
 [node name="Tree57" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 8, 120 )
+collision_mask = 39
 
 [node name="Tree08" parent="Background Trees/Tree57" instance=ExtResource( 3 )]
 position = Vector2( 408, -120 )
+collision_mask = 39
 
 [node name="Tree40" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 8 )
+collision_mask = 39
 
 [node name="Tree41" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 16 )
+collision_mask = 39
 
 [node name="Tree42" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 24 )
+collision_mask = 39
 
 [node name="Tree43" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 32 )
+collision_mask = 39
 
 [node name="Tree44" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 40 )
+collision_mask = 39
 
 [node name="Tree45" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 40 )
+collision_mask = 39
 
 [node name="Tree46" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 48 )
+collision_mask = 39
 
 [node name="Tree47" parent="Background Trees/Tree57" instance=ExtResource( 2 )]
 position = Vector2( 0, 56 )
+collision_mask = 39
 
 [node name="Tree59" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 432, 0 )
+collision_mask = 39
 
 [node name="Tree99" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 456, 8 )
+collision_mask = 39
 
 [node name="Tree63" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 464, 0 )
+collision_mask = 39
 
 [node name="Tree64" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 472, 8 )
+collision_mask = 39
 
 [node name="Tree69" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 480, 16 )
+collision_mask = 39
 
 [node name="Tree75" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 464, 16 )
+collision_mask = 39
 
 [node name="Tree70" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 496, 16 )
+collision_mask = 39
 
 [node name="Tree58" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 8, 184 )
+collision_mask = 39
 
 [node name="Tree67" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 192 )
+collision_mask = 39
 
 [node name="Tree61" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 200 )
+collision_mask = 39
 
 [node name="Tree62" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 208 )
+collision_mask = 39
 
 [node name="Tree66" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 216 )
+collision_mask = 39
 
 [node name="Tree71" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 224 )
+collision_mask = 39
 
 [node name="Tree72" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 232 )
+collision_mask = 39
 
 [node name="Tree73" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 240 )
+collision_mask = 39
 
 [node name="Tree74" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 8, 248 )
+collision_mask = 39
 
 [node name="Tree60" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( 0, 8 )
+collision_mask = 39
 
 [node name="Tree61" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( 0, 16 )
+collision_mask = 39
 
 [node name="Tree62" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( -8, 24 )
+collision_mask = 39
 
 [node name="Tree70" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -216 )
+collision_mask = 39
 
 [node name="Tree74" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -224 )
+collision_mask = 39
 
 [node name="Tree75" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -208 )
+collision_mask = 39
 
 [node name="Tree73" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( 464, -200 )
+collision_mask = 39
 
 [node name="Tree72" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( 464, -192 )
+collision_mask = 39
 
 [node name="Tree76" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -184 )
+collision_mask = 39
 
 [node name="Tree77" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -176 )
+collision_mask = 39
 
 [node name="Tree89" parent="Background Trees/Tree74/Tree77" instance=ExtResource( 3 )]
 position = Vector2( 0, 112 )
+collision_mask = 39
 
 [node name="Tree71" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( 464, -168 )
+collision_mask = 39
 
 [node name="Tree79" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( 464, -56 )
+collision_mask = 39
 
 [node name="Tree78" parent="Background Trees/Tree74" instance=ExtResource( 3 )]
 position = Vector2( 464, -48 )
+collision_mask = 39
 
 [node name="Tree80" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -40 )
+collision_mask = 39
 
 [node name="Tree81" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -32 )
+collision_mask = 39
 
 [node name="Tree75" parent="Background Trees/Tree74/Tree81" instance=ExtResource( 2 )]
 position = Vector2( -448, -208 )
+collision_mask = 39
 
 [node name="Tree82" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -24 )
+collision_mask = 39
 
 [node name="Tree83" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -16 )
+collision_mask = 39
 
 [node name="Tree84" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, -8 )
+collision_mask = 39
 
 [node name="Tree85" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, 0 )
+collision_mask = 39
 
 [node name="Tree86" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, 8 )
+collision_mask = 39
 
 [node name="Tree87" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, 16 )
+collision_mask = 39
 
 [node name="Tree88" parent="Background Trees/Tree74" instance=ExtResource( 2 )]
 position = Vector2( 464, 24 )
+collision_mask = 39
 
 [node name="Tree78" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 360, 8 )
+collision_mask = 39
 
 [node name="Tree79" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 360, 8 )
+collision_mask = 39
 
 [node name="Tree80" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 376, 8 )
+collision_mask = 39
 
 [node name="Tree81" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 8 )
+collision_mask = 39
 
 [node name="Tree82" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 40, 8 )
+collision_mask = 39
 
 [node name="Tree83" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 56, 8 )
+collision_mask = 39
 
 [node name="Tree84" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 104, 8 )
+collision_mask = 39
 
 [node name="Tree85" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 168, 8 )
+collision_mask = 39
 
 [node name="Tree86" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 280, 8 )
+collision_mask = 39
 
 [node name="Tree87" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 216, 8 )
+collision_mask = 39
 
 [node name="Tree88" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 8 )
+collision_mask = 39
 
 [node name="Tree89" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 136, 8 )
+collision_mask = 39
 
 [node name="Tree90" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 152, 8 )
+collision_mask = 39
 
 [node name="Tree91" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 184, 8 )
+collision_mask = 39
 
 [node name="Tree92" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 200, 8 )
+collision_mask = 39
 
 [node name="Tree93" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 232, 8 )
+collision_mask = 39
 
 [node name="Tree95" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 296, 8 )
+collision_mask = 39
 
 [node name="Tree96" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 312, 8 )
+collision_mask = 39
 
 [node name="Tree97" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 328, 8 )
+collision_mask = 39
 
 [node name="Tree100" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 440, 8 )
+collision_mask = 39
 
 [node name="Tree103" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 112, 16 )
+collision_mask = 39
 
 [node name="Tree104" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 368, 16 )
+collision_mask = 39
 
 [node name="Tree105" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 368, 16 )
+collision_mask = 39
 
 [node name="Tree108" parent="Background Trees/Tree105" instance=ExtResource( 3 )]
 position = Vector2( -336, 0 )
+collision_mask = 39
 
 [node name="Tree109" parent="Background Trees/Tree105" instance=ExtResource( 3 )]
 position = Vector2( -352, 0 )
+collision_mask = 39
 
 [node name="Tree106" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 384, 16 )
+collision_mask = 39
 
 [node name="Tree108" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 24 )
+collision_mask = 39
 
 [node name="Tree110" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 32 )
+collision_mask = 39
 
 [node name="Tree134" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 40 )
+collision_mask = 39
 
 [node name="Tree107" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 400, 16 )
+collision_mask = 39
 
 [node name="Tree109" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 48, 16 )
+collision_mask = 39
 
 [node name="Tree111" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 176, 16 )
+collision_mask = 39
 
 [node name="Tree112" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 288, 16 )
+collision_mask = 39
 
 [node name="Tree113" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 224, 16 )
+collision_mask = 39
 
 [node name="Tree114" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 128, 16 )
+collision_mask = 39
 
 [node name="Tree115" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 144, 16 )
+collision_mask = 39
 
 [node name="Tree119" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 24 )
+collision_mask = 39
 
 [node name="Tree120" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 32 )
+collision_mask = 39
 
 [node name="Tree124" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 40 )
+collision_mask = 39
 
 [node name="Tree126" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 48 )
+collision_mask = 39
 
 [node name="Tree116" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 160, 16 )
+collision_mask = 39
 
 [node name="Tree117" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 192, 16 )
+collision_mask = 39
 
 [node name="Tree118" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 208, 16 )
+collision_mask = 39
 
 [node name="Tree121" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 304, 16 )
+collision_mask = 39
 
 [node name="Tree122" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 320, 16 )
+collision_mask = 39
 
 [node name="Tree123" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 336, 16 )
+collision_mask = 39
 
 [node name="Tree127" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 120, 56 )
+collision_mask = 39
 input_pickable = true
 
 [node name="Tree128" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 120, 64 )
+collision_mask = 39
 input_pickable = true
 
 [node name="Tree129" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 72 )
+collision_mask = 39
 
 [node name="Tree130" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 80 )
+collision_mask = 39
 
 [node name="Tree131" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 88 )
+collision_mask = 39
 
 [node name="Tree132" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 96 )
+collision_mask = 39
 
 [node name="Tree133" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 120, 104 )
+collision_mask = 39
 input_pickable = true
 
 [node name="Tree134" parent="Background Trees/Tree133" instance=ExtResource( 2 )]
 position = Vector2( 0, 8 )
+collision_mask = 39
 
 [node name="Tree135" parent="Background Trees/Tree133" instance=ExtResource( 2 )]
 position = Vector2( 0, 16 )
+collision_mask = 39
 
 [node name="Tree136" parent="Background Trees/Tree133" instance=ExtResource( 2 )]
 position = Vector2( 0, 24 )
+collision_mask = 39
 
 [node name="Tree137" parent="Background Trees/Tree133" instance=ExtResource( 2 )]
 position = Vector2( 0, 32 )
+collision_mask = 39
 
 [node name="Tree138" parent="Background Trees/Tree133" instance=ExtResource( 2 )]
 position = Vector2( 0, 40 )
+collision_mask = 39
 
 [node name="Tree139" parent="Background Trees/Tree133" instance=ExtResource( 2 )]
 position = Vector2( 0, 48 )
+collision_mask = 39
 
 [node name="Tree140" parent="Background Trees/Tree133" instance=ExtResource( 2 )]
 position = Vector2( 0, 56 )
+collision_mask = 39
 
 [node name="Tree125" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 448, 16 )
+collision_mask = 39
 
 [node name="Tree135" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 392, 48 )
+collision_mask = 39
 
 [node name="Tree136" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 392, 56 )
+collision_mask = 39
 
 [node name="Tree137" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 392, 64 )
+collision_mask = 39
 
 [node name="Tree138" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 392, 72 )
+collision_mask = 39
 
 [node name="Tree139" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 392, 80 )
+collision_mask = 39
 
 [node name="Tree140" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 88 )
+collision_mask = 39
 
 [node name="Tree141" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 96 )
+collision_mask = 39
 
 [node name="Tree142" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 104 )
+collision_mask = 39
 
 [node name="Tree143" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 112 )
+collision_mask = 39
 
 [node name="Tree144" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 120 )
+collision_mask = 39
 
 [node name="Tree145" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 128 )
+collision_mask = 39
 
 [node name="Tree146" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 136 )
+collision_mask = 39
 
 [node name="Tree147" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 144 )
+collision_mask = 39
 
 [node name="Tree148" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 152 )
+collision_mask = 39
 
 [node name="Tree149" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 160 )
+collision_mask = 39
 
 [node name="Tree150" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 168 )
+collision_mask = 39
 
 [node name="Tree151" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 176 )
+collision_mask = 39
 
 [node name="Tree152" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 184 )
+collision_mask = 39
 
 [node name="Tree153" parent="Background Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 192 )
+collision_mask = 39
 
 [node name="Tree76" parent="Background Trees" instance=ExtResource( 3 )]
 position = Vector2( 352, 16 )
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="Snowman" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 48, 112 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Snowman2" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 88, 110 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Snowman3" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 55, 240 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Rat" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 74, 158 )
-
-[node name="LilTim" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 212, 184 )
+collision_mask = 39
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Cover" parent="YSort" instance=ExtResource( 5 )]
+visible = false
 cell_size = Vector2( 8, 8 )
 tile_data = PoolIntArray( 65529, 1, 0, 196620, 1, 7, 262151, 1, 65537, 262156, 1, 0, 327692, 1, 0, 393223, 1, 0, 393228, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458785, 1, 196608, 458795, 1, 196612, 458796, 1, 7, 524321, 1, 131072, 524332, 1, 196612, 524333, 1, 7, 589857, 1, 196608, 589869, 1, 131074, 655405, 1, 131074, 720941, 1, 196610, 786477, 1, 131074, 852002, 1, 65536, 852013, 1, 131074, 917533, 1, 4, 917534, 1, 6, 917535, 1, 7, 917538, 1, 65540, 917541, 1, 7, 917549, 1, 131074, 983069, 1, 65540, 983071, 1, 65543, 983074, 1, 131076, 983077, 1, 131079, 983085, 1, 131074, 1048610, 1, 196612, 1048611, 1, 196613, 1048612, 1, 196614, 1048613, 1, 196615, 1048621, 1, 131074, 1114157, 1, 131074, 1179650, 1, 65537, 1179651, 1, 196613, 1179652, 1, 196614, 1179653, 1, 196613, 1179654, 1, 196614, 1179655, 1, 196613, 1179656, 1, 196614, 1179657, 1, 196614, 1179658, 1, 196613, 1179659, 1, 196614, 1179660, 1, 196613, 1179661, 1, 196614, 1179682, 1, 65537, 1179683, 1, 5, 1179684, 1, 6, 1179685, 1, 5, 1179686, 1, 6, 1179687, 1, 5, 1179688, 1, 7, 1245200, 1, 4, 1245201, 1, 5, 1245202, 1, 6, 1245203, 1, 7, 1245224, 1, 196612, 1245225, 1, 5, 1245226, 1, 6, 1245227, 1, 5, 1245228, 1, 6, 1310739, 1, 65536, 1376260, 1, 196613, 1376261, 1, 196614, 1441806, 1, 7, 1507342, 1, 65543, 1572878, 1, 131079, 1638414, 1, 65543, 1703950, 1, 131079, 1703974, 1, 65537, 1703975, 1, 65537, 1769475, 1, 4, 1769476, 1, 5, 1769477, 1, 6, 1769478, 1, 5, 1769479, 1, 5, 1769480, 1, 6, 1769486, 1, 196615, 1835011, 1, 65540, 1900547, 1, 131076, 1900582, 1, 4, 1900583, 1, 5, 1900584, 1, 6, 1900585, 1, 5, 1900586, 1, 6, 1900587, 1, 5, 1900588, 1, 7, 1966083, 1, 196612, 1966118, 1, 65540, 1966124, 1, 65543, 2031654, 1, 131076, 2031660, 1, 131079, 2097190, 1, 196612 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 80, 29 )
+position = Vector2( 78, 38 )
 collision_mask = 2
 
 [node name="WallLevel00Start" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 81, 59 )
+position = Vector2( 78, 59 )
 
-[node name="CollisionShape2D" parent="YSort/WallLevel00Start" index="3"]
-polygon = PoolVector2Array( -23, -14, -23, 1, 24, 1, 24, -14, 18, -3, -18, -3 )
+[node name="WallBottom3x1" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 40, 148 )
+collision_layer = 8
+collision_mask = 39
 
-[node name="WallProximity" parent="YSort/WallLevel00Start" index="4"]
-collision_layer = 32
+[node name="WallBottom2x1" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 95, 150 )
+collision_mask = 39
 
-[node name="CollisionShape2D" parent="YSort/WallLevel00Start/WallProximity" index="0"]
-position = Vector2( 0, 6.31313 )
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort"]
+collision_layer = 8
+collision_mask = 39
+
+[node name="005-Top" type="Sprite" parent="YSort/StaticBody2D"]
+position = Vector2( 48, 224 )
+texture = ExtResource( 17 )
+
+[node name="005-Top2" type="Sprite" parent="YSort/StaticBody2D"]
+position = Vector2( 64, 224 )
+texture = ExtResource( 17 )
+
+[node name="001-TlCorner" type="Sprite" parent="YSort/StaticBody2D"]
+position = Vector2( 32, 224 )
+texture = ExtResource( 18 )
+
+[node name="007-Left" type="Sprite" parent="YSort/StaticBody2D"]
+position = Vector2( 32, 240 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="YSort/StaticBody2D"]
+polygon = PoolVector2Array( 72, 216, 72, 220, 30, 220, 30, 248, 24, 248, 24, 216 )
+
+[node name="WallProximity" parent="YSort/StaticBody2D" instance=ExtResource( 16 )]
+position = Vector2( 48, 221 )
+scale = Vector2( 2.42305, 1.16 )
+
+[node name="Enemies" type="Node2D" parent="YSort"]
+
+[node name="Snowman" parent="YSort/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 48, 112 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman2" parent="YSort/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 88, 110 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman3" parent="YSort/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 53, 234 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Rat" parent="YSort/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 84, 158 )
+collision_layer = 2
+
+[node name="LilTim" parent="YSort/Enemies" instance=ExtResource( 8 )]
+position = Vector2( 195, 172 )
+collision_layer = 2
 
 [node name="Items" type="Node2D" parent="."]
 
@@ -739,279 +988,367 @@ position = Vector2( 1, 0 )
 
 [node name="Tree09" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 400, 272 )
+collision_mask = 39
 
 [node name="Tree10" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 416, 272 )
+collision_mask = 39
 
 [node name="Tree75" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 40, 264 )
+collision_mask = 39
 
 [node name="Tree02" parent="Foreground Trees/Tree75" instance=ExtResource( 3 )]
 position = Vector2( -16, 0 )
+collision_mask = 39
 
 [node name="Tree76" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 72, 264 )
+collision_mask = 39
 
 [node name="Tree02" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 32, 0 )
+collision_mask = 39
 
 [node name="Tree03" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 80, 0 )
+collision_mask = 39
 
 [node name="Tree09" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 80, 0 )
+collision_mask = 39
 
 [node name="Tree04" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 192, -160 )
+collision_mask = 39
 
 [node name="Tree05" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 192, -152 )
+collision_mask = 39
 
 [node name="Tree06" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 192, -144 )
+collision_mask = 39
 
 [node name="Tree07" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 192, -136 )
+collision_mask = 39
 
 [node name="Tree08" parent="Foreground Trees/Tree76" instance=ExtResource( 3 )]
 position = Vector2( 192, -128 )
+collision_mask = 39
 
 [node name="Tree77" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 72, 264 )
+collision_mask = 39
 
 [node name="Tree78" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 232, 264 )
+collision_mask = 39
 
 [node name="Tree03" parent="Foreground Trees/Tree78" instance=ExtResource( 3 )]
 position = Vector2( 80, 0 )
+collision_mask = 39
 
 [node name="Tree05" parent="Foreground Trees/Tree78" instance=ExtResource( 3 )]
 position = Vector2( 112, 0 )
+collision_mask = 39
 
 [node name="Tree04" parent="Foreground Trees/Tree78" instance=ExtResource( 3 )]
 position = Vector2( 96, 0 )
+collision_mask = 39
 
 [node name="Tree82" parent="Foreground Trees/Tree78" instance=ExtResource( 2 )]
 position = Vector2( -112, 0 )
+collision_mask = 39
 
 [node name="Tree127" parent="Foreground Trees/Tree78" instance=ExtResource( 2 )]
 position = Vector2( -112, -48 )
+collision_mask = 39
 
 [node name="Tree132" parent="Foreground Trees/Tree78" instance=ExtResource( 2 )]
 position = Vector2( -112, -40 )
+collision_mask = 39
 
 [node name="Tree128" parent="Foreground Trees/Tree78" instance=ExtResource( 2 )]
 position = Vector2( -112, -32 )
+collision_mask = 39
 
 [node name="Tree129" parent="Foreground Trees/Tree78" instance=ExtResource( 2 )]
 position = Vector2( -112, -24 )
+collision_mask = 39
 
 [node name="Tree130" parent="Foreground Trees/Tree78" instance=ExtResource( 2 )]
 position = Vector2( -112, -16 )
+collision_mask = 39
 
 [node name="Tree131" parent="Foreground Trees/Tree78" instance=ExtResource( 2 )]
 position = Vector2( -112, -8 )
+collision_mask = 39
 
 [node name="Tree07" parent="Foreground Trees/Tree78" instance=ExtResource( 3 )]
 position = Vector2( 104, 8 )
+collision_mask = 39
 
 [node name="Tree06" parent="Foreground Trees/Tree78" instance=ExtResource( 3 )]
 position = Vector2( 192, 0 )
+collision_mask = 39
 
 [node name="Tree79" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 56, 264 )
+collision_mask = 39
 
 [node name="Tree80" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 88, 264 )
+collision_mask = 39
 
 [node name="Tree81" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 168, 264 )
+collision_mask = 39
 
 [node name="Tree125" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 120, 264 )
+collision_mask = 39
 
 [node name="Tree124" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 128, 272 )
+collision_mask = 39
 
 [node name="Tree83" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 64, 272 )
+collision_mask = 39
 
 [node name="Tree123" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 16, 272 )
+collision_mask = 39
 
 [node name="Tree84" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 96, 272 )
+collision_mask = 39
 
 [node name="Tree85" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 216, 264 )
+collision_mask = 39
 
 [node name="Tree86" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 216, 264 )
+collision_mask = 39
 
 [node name="Tree87" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 280, 264 )
+collision_mask = 39
 
 [node name="Tree88" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 296, 264 )
+collision_mask = 39
 
 [node name="Tree89" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 360, 264 )
+collision_mask = 39
 
 [node name="Tree90" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 352, 272 )
+collision_mask = 39
 
 [node name="Tree91" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 352, 272 )
+collision_mask = 39
 
 [node name="Tree92" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 376, 264 )
+collision_mask = 39
 
 [node name="Tree93" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 368, 272 )
+collision_mask = 39
 
 [node name="Tree94" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 392, 264 )
+collision_mask = 39
 
 [node name="Tree95" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 384, 272 )
+collision_mask = 39
 
 [node name="Tree96" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 408, 264 )
+collision_mask = 39
 
 [node name="Tree97" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 440, 264 )
+collision_mask = 39
 
 [node name="Tree98" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 456, 264 )
+collision_mask = 39
 
 [node name="Tree99" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 448, 272 )
+collision_mask = 39
 
 [node name="Tree100" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 248, 264 )
+collision_mask = 39
 
 [node name="Tree142" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 248, 264 )
+collision_mask = 39
 
 [node name="Tree111" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 264, 144 )
+collision_mask = 39
 
 [node name="Tree126" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 264, 152 )
+collision_mask = 39
 
 [node name="Tree127" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 264, 160 )
+collision_mask = 39
 
 [node name="Tree128" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 264, 168 )
+collision_mask = 39
 
 [node name="Tree129" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 264, 176 )
+collision_mask = 39
 
 [node name="Tree130" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 264, 176 )
+collision_mask = 39
 
 [node name="Tree101" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 136, 264 )
+collision_mask = 39
 
 [node name="Tree103" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 184, 264 )
+collision_mask = 39
 
 [node name="Tree104" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 32, 272 )
+collision_mask = 39
 
 [node name="Tree105" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 48, 272 )
+collision_mask = 39
 
 [node name="Tree106" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 80, 272 )
+collision_mask = 39
 
 [node name="Tree107" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 184 )
+collision_mask = 39
 
 [node name="Tree131" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 192 )
+collision_mask = 39
 
 [node name="Tree132" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 200 )
+collision_mask = 39
 
 [node name="Tree133" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 208 )
+collision_mask = 39
 
 [node name="Tree134" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 216 )
+collision_mask = 39
 
 [node name="Tree135" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 224 )
+collision_mask = 39
 
 [node name="Tree136" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 232 )
+collision_mask = 39
 
 [node name="Tree138" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 240 )
+collision_mask = 39
 
 [node name="Tree139" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 248 )
+collision_mask = 39
 
 [node name="Tree140" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 256 )
+collision_mask = 39
 
 [node name="Tree141" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 256 )
+collision_mask = 39
 
 [node name="Tree02" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 264, 264 )
+collision_mask = 39
 
 [node name="Tree108" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 272, 272 )
+collision_mask = 39
 
 [node name="Tree109" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 208, 272 )
+collision_mask = 39
 
 [node name="Tree110" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 112, 272 )
+collision_mask = 39
 
 [node name="Tree112" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 144, 272 )
+collision_mask = 39
 
 [node name="Tree113" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 176, 272 )
+collision_mask = 39
 
 [node name="Tree114" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 192, 272 )
+collision_mask = 39
 
 [node name="Tree137" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 160, 272 )
+collision_mask = 39
 
 [node name="Tree115" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 224, 272 )
+collision_mask = 39
 
 [node name="Tree116" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 240, 272 )
+collision_mask = 39
 
 [node name="Tree117" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 288, 272 )
+collision_mask = 39
 
 [node name="Tree118" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 304, 272 )
+collision_mask = 39
 
 [node name="Tree119" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 320, 272 )
+collision_mask = 39
 
 [node name="Tree120" parent="Foreground Trees" instance=ExtResource( 2 )]
 position = Vector2( 256, 272 )
+collision_mask = 39
 
 [node name="Tree121" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 432, 272 )
+collision_mask = 39
 
 [node name="Tree122" parent="Foreground Trees" instance=ExtResource( 3 )]
 position = Vector2( 464, 272 )
+collision_mask = 39
 
-[editable path="Enemies/Snowman"]
-[editable path="Enemies/Snowman2"]
-[editable path="Enemies/Snowman3"]
-[editable path="Enemies/Rat"]
-[editable path="YSort/WallLevel00Start"]
-[editable path="YSort/WallLevel00Start/WallProximity"]
+[editable path="YSort/Enemies/Snowman"]
+[editable path="YSort/Enemies/Snowman2"]
+[editable path="YSort/Enemies/Snowman3"]
+[editable path="YSort/Enemies/Rat"]
 [editable path="Items/Jacket"]
 [editable path="Items/Snowball Pocket"]

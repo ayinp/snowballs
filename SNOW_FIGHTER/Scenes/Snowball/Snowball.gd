@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var direction = 0
-var my_id = "snowball"
+onready var my_id = "snowball"
 
 func _on_Snowball_body_entered(_body):
 	queue_free()

@@ -26,7 +26,7 @@ radius = 3.0
 
 [node name="Enemy Snowball" type="RigidBody2D"]
 collision_layer = 32
-collision_mask = 29
+collision_mask = 0
 gravity_scale = 0.0
 contacts_reported = 1
 contact_monitor = true

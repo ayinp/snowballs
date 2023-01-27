@@ -45,7 +45,8 @@ func _on_Visibility_body_entered(body):
 				
 					snowball_instance.apply_impulse(Vector2(), direction * snowball_speed)
 				
-					get_tree().get_root().add_child(snowball_instance)
+					get_tree().get_root().call_deferred("add_child", snowball_instance)
+
 					last_fire_time = current_time
 					snowball_amount -= 1
 					
@@ -54,7 +55,7 @@ func _on_Visibility_body_entered(body):
 					
 					
 				if snowball_amount == 0:
-						call_deferred("set_has_snowball", false)
+						has_snowball = false
 						break
 				
 			yield(get_tree(), "idle_frame")
