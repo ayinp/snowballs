@@ -5,7 +5,7 @@ var speed = 80
 var motion = Vector2(0,0)
 onready var p = $"../../Player"
 
-onready var rat = $"."
+#onready var rat = $"."
 
 
 func _physics_process(_delta):

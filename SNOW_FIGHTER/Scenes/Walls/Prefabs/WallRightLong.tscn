@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Walls/WallProximity.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Environment/Walls/008-Right.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.5, 136 )
+
+[node name="WallVerticalCenter" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 7
+
+[node name="008-Right2" type="Sprite" parent="."]
+position = Vector2( -40, -40 )
+texture = ExtResource( 3 )
+
+[node name="008-Right8" type="Sprite" parent="."]
+position = Vector2( -40, -136 )
+texture = ExtResource( 3 )
+
+[node name="008-Right" type="Sprite" parent="."]
+position = Vector2( -40, -24 )
+texture = ExtResource( 3 )
+
+[node name="008-Right3" type="Sprite" parent="."]
+position = Vector2( -40, -56 )
+texture = ExtResource( 3 )
+
+[node name="008-Right4" type="Sprite" parent="."]
+position = Vector2( -40, -72 )
+texture = ExtResource( 3 )
+
+[node name="008-Right5" type="Sprite" parent="."]
+position = Vector2( -40, -88 )
+texture = ExtResource( 3 )
+
+[node name="008-Right6" type="Sprite" parent="."]
+position = Vector2( -40, -104 )
+texture = ExtResource( 3 )
+
+[node name="008-Right7" type="Sprite" parent="."]
+position = Vector2( -40, -120 )
+texture = ExtResource( 3 )
+
+[node name="008-Right9" type="Sprite" parent="."]
+position = Vector2( -40, 88 )
+texture = ExtResource( 3 )
+
+[node name="008-Right10" type="Sprite" parent="."]
+position = Vector2( -40, -8 )
+texture = ExtResource( 3 )
+
+[node name="008-Right11" type="Sprite" parent="."]
+position = Vector2( -40, 104 )
+texture = ExtResource( 3 )
+
+[node name="008-Right17" type="Sprite" parent="."]
+position = Vector2( -40, 120 )
+texture = ExtResource( 3 )
+
+[node name="008-Right12" type="Sprite" parent="."]
+position = Vector2( -40, 72 )
+texture = ExtResource( 3 )
+
+[node name="008-Right13" type="Sprite" parent="."]
+position = Vector2( -40, 56 )
+texture = ExtResource( 3 )
+
+[node name="008-Right14" type="Sprite" parent="."]
+position = Vector2( -40, 40 )
+texture = ExtResource( 3 )
+
+[node name="008-Right15" type="Sprite" parent="."]
+position = Vector2( -40, 24 )
+texture = ExtResource( 3 )
+
+[node name="008-Right16" type="Sprite" parent="."]
+position = Vector2( -40, 8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -35.5, -8 )
+shape = SubResource( 1 )
+
+[node name="WallProximity" parent="." instance=ExtResource( 2 )]
+position = Vector2( -38, -8 )
+scale = Vector2( 0.849385, 13.5817 )

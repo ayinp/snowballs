@@ -129,7 +129,7 @@ _global_script_class_icons={
 [application]
 
 config/name="SNOW FIGHTER"
-run/main_scene="res://Scenes/Level/level 00.tscn"
+run/main_scene="res://Scenes/Level/Level00.tscn"
 
 [display]
 

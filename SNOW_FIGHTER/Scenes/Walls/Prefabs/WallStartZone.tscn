@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Walls/Wall06Bottom.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Walls/Wall01TLCorner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Walls/Wall08Right.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/WallProximity.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Walls/WallProximity.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="StaticBody2D"]
 collision_layer = 8
@@ -36,4 +36,4 @@ scale = Vector2( -6587.35, 3224.66 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallProximity"]
 scale = Vector2( -0.000544443, -0.00155619 )
-polygon = PoolVector2Array( 4.74008, 0.597826, 4.74008, -4.18478, 18.1238, -4.18478, 18.1238, 6.97464, 13.6626, 6.97464, 13.6626, 2.19203, 13.6626, 2.19203, 13.6626, 0.597826, 6.97071, 0.597826, 6.97071, 2.19203, 9.20134, 2.19203, 9.20134, 6.97464, 4.74008, 6.97464 )
+polygon = PoolVector2Array( 4.74008, 0.597826, 4.74008, -4.18478, 18.1238, -4.18478, 18.1238, 6.97464, 13.6626, 6.97464, 13.6626, 2.19203, 13.6626, 2.19203, 13.6626, -0.398551, 6.97071, -0.398551, 6.97071, 2.19203, 9.20134, 2.19203, 9.20134, 6.97464, 4.74008, 6.97464 )

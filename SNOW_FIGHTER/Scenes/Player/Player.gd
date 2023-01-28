@@ -30,19 +30,6 @@ func snowbug():
 		max_snowball = 10
 		snowball_amount = 10
 		break
-# Signal when player enters snowspot			
-func _entered_snowspot(body):
-	if body == $".":
-		print("Entered")
-		in_snowspot = true
-		print(in_snowspot)
-
-# Signal when player exits snowspot
-func _exited_snowspot(body):
-	if body == $".":
-		print("Exited")
-		in_snowspot = false
-		print(in_snowspot)
 
 # movement with W, A, S, D keys
 func wasd_move():
