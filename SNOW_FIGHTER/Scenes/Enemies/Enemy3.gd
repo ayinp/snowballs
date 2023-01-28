@@ -3,7 +3,7 @@ var my_id = 'Child'
 var go = false
 var speed = 80
 var motion = Vector2(0,0)
-onready var p = $"../Player"
+onready var p = $"../../Player"
 
 #onready var rat = $"."
 
