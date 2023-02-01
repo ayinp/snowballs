@@ -1,0 +1,501 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://Scenes/Player/PlayerTester.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Player/MC001-Throw2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player/pickup.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Player/player_hurtbox.gd" type="Script" id=4]
+
+[sub_resource type="CapsuleShape2D" id=26]
+radius = 3.00001
+height = 5.99999
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 6, 8 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 6, 8 )
+
+[sub_resource type="Animation" id=71]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 22 ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "idle_down"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=46]
+resource_name = "idle_left"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=47]
+resource_name = "idle_right"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+
+[sub_resource type="Animation" id=48]
+resource_name = "idle_up"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "make_ballDown"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 25, 26, 27, 28, 26, 25, 0 ]
+}
+
+[sub_resource type="Animation" id=73]
+resource_name = "make_ballLeft"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 30, 31, 32, 31, 32, 30, 10 ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "make_ballRight"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 35, 36, 37, 36, 37, 35, 15 ]
+}
+
+[sub_resource type="Animation" id=70]
+resource_name = "make_ballUp"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 20, 21, 22, 23, 21, 20, 5 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "throw_down"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.387636, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 3, 4, 4, 0, 0 ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "throw_left"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 12, 13, 13, 10, 10 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "throw_right"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 17, 17, 16, 16, 15, 15 ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "throw_up"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 8, 9, 9, 5, 5 ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "walk_down"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 0, 2, 0 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "walk_left"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 11, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "walk_right"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 16, 15, 16, 15 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "walk_up"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mc001-Throw2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 5, 7, 5 ]
+}
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=82]
+
+[sub_resource type="AnimationNodeAnimation" id=49]
+animation = "idle_left"
+
+[sub_resource type="AnimationNodeAnimation" id=50]
+animation = "idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id=51]
+animation = "idle_right"
+
+[sub_resource type="AnimationNodeAnimation" id=52]
+animation = "idle_up"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=53]
+blend_point_0/node = SubResource( 49 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 50 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 51 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 52 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=76]
+animation = "make_ballLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=77]
+animation = "make_ballDown"
+
+[sub_resource type="AnimationNodeAnimation" id=78]
+animation = "make_ballRight"
+
+[sub_resource type="AnimationNodeAnimation" id=79]
+animation = "make_ballUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=75]
+blend_point_0/node = SubResource( 76 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 77 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 78 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 79 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=63]
+animation = "throw_down"
+
+[sub_resource type="AnimationNodeAnimation" id=64]
+animation = "throw_right"
+
+[sub_resource type="AnimationNodeAnimation" id=65]
+animation = "throw_up"
+
+[sub_resource type="AnimationNodeAnimation" id=66]
+animation = "throw_left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=67]
+blend_point_0/node = SubResource( 63 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 64 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 65 )
+blend_point_2/pos = Vector2( 0, -1.1 )
+blend_point_3/node = SubResource( 66 )
+blend_point_3/pos = Vector2( -1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=54]
+animation = "walk_left"
+
+[sub_resource type="AnimationNodeAnimation" id=55]
+animation = "walk_down"
+
+[sub_resource type="AnimationNodeAnimation" id=56]
+animation = "walk_right"
+
+[sub_resource type="AnimationNodeAnimation" id=57]
+animation = "walk_up"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=58]
+blend_point_0/node = SubResource( 54 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 55 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 56 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 57 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=68]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=69]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=80]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=81]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=61]
+states/BlendSpace2D/node = SubResource( 82 )
+states/BlendSpace2D/position = Vector2( 731.192, 113 )
+states/idle/node = SubResource( 53 )
+states/idle/position = Vector2( 318, 93 )
+states/make_ball/node = SubResource( 75 )
+states/make_ball/position = Vector2( 120, 93 )
+states/throw/node = SubResource( 67 )
+states/throw/position = Vector2( 318, 203 )
+states/walk/node = SubResource( 58 )
+states/walk/position = Vector2( 549, 93 )
+transitions = [ "idle", "walk", SubResource( 59 ), "walk", "idle", SubResource( 60 ), "throw", "idle", SubResource( 68 ), "idle", "throw", SubResource( 69 ), "idle", "make_ball", SubResource( 80 ), "make_ball", "idle", SubResource( 81 ) ]
+start_node = "idle"
+graph_offset = Vector2( -206.808, 0 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=62]
+
+[node name="Player" type="KinematicBody2D"]
+collision_mask = 0
+script = ExtResource( 1 )
+friction = 1
+
+[node name="Mc001-Throw2" type="Sprite" parent="."]
+position = Vector2( 0, -5 )
+texture = ExtResource( 2 )
+hframes = 5
+vframes = 8
+frame = 22
+
+[node name="Bounding Box" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 1 )
+rotation = -1.5708
+shape = SubResource( 26 )
+
+[node name="Snowball-Point" type="Node2D" parent="."]
+position = Vector2( 4, -3 )
+
+[node name="pickup" type="Area2D" parent="."]
+visible = false
+position = Vector2( 0, -6 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickup"]
+shape = SubResource( 24 )
+
+[node name="player_hurtbox" type="Area2D" parent="."]
+visible = false
+position = Vector2( 0, -6 )
+collision_mask = 34
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox"]
+shape = SubResource( 25 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 71 )
+anims/idle_down = SubResource( 35 )
+anims/idle_left = SubResource( 46 )
+anims/idle_right = SubResource( 47 )
+anims/idle_up = SubResource( 48 )
+anims/make_ballDown = SubResource( 72 )
+anims/make_ballLeft = SubResource( 73 )
+anims/make_ballRight = SubResource( 74 )
+anims/make_ballUp = SubResource( 70 )
+anims/throw_down = SubResource( 27 )
+anims/throw_left = SubResource( 28 )
+anims/throw_right = SubResource( 29 )
+anims/throw_up = SubResource( 30 )
+anims/walk_down = SubResource( 31 )
+anims/walk_left = SubResource( 32 )
+anims/walk_right = SubResource( 33 )
+anims/walk_up = SubResource( 34 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 61 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 62 )
+parameters/BlendSpace2D/blend_position = Vector2( 0, 0 )
+parameters/idle/blend_position = Vector2( 0, 0.1 )
+parameters/make_ball/blend_position = Vector2( 0, 1.1 )
+parameters/throw/blend_position = Vector2( 0, 0.1 )
+parameters/walk/blend_position = Vector2( 0, 0.0572255 )
+
+[connection signal="area_entered" from="pickup" to="pickup" method="_on_pickup_area_entered"]
+[connection signal="body_entered" from="player_hurtbox" to="player_hurtbox" method="_on_player_hurtbox_body_entered"]
