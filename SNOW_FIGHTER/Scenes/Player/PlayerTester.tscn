@@ -29,6 +29,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 22 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Snowball-Point:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -5, -4 ) ]
+}
 
 [sub_resource type="Animation" id=35]
 resource_name = "idle_down"
@@ -234,6 +246,35 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 3, 3, 4, 4, 0, 0 ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "throw_animation"
+}, {
+"args": [  ],
+"method": "throw_animation_finished"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Snowball-Point:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 4, 5 ), Vector2( 4, 5 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=28]
 resource_name = "throw_left"
@@ -249,6 +290,35 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 12, 13, 13, 10, 10 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "throw_animation"
+}, {
+"args": [  ],
+"method": "throw_animation_finished"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Snowball-Point:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -8, -1 ), Vector2( -8, -1 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=29]
@@ -266,6 +336,35 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 17, 17, 16, 16, 15, 15 ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "throw_animation"
+}, {
+"args": [  ],
+"method": "throw_animation_finished"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Snowball-Point:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 8, -3 ), Vector2( 8, -3 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=30]
 resource_name = "throw_up"
@@ -281,6 +380,46 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 8, 8, 9, 9, 5, 5 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "throw_animation"
+}, {
+"args": [  ],
+"method": "throw_animation_finished"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Snowball-Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -5, -9 ), Vector2( -5, -9 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=31]
@@ -483,13 +622,14 @@ graph_offset = Vector2( -206.808, 0 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+
+[node name="Snowball-Point" type="Node2D" parent="."]
+position = Vector2( -5, -4 )
 
 [node name="Mc001-Throw2" type="Sprite" parent="."]
-position = Vector2( 0, -5 )
+position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
+offset = Vector2( 0, 4 )
 hframes = 5
 vframes = 8
 frame = 22
@@ -499,9 +639,6 @@ visible = false
 position = Vector2( 0, 1 )
 rotation = -1.5708
 shape = SubResource( 26 )
-
-[node name="Snowball-Point" type="Node2D" parent="."]
-position = Vector2( 4, -3 )
 
 [node name="pickup" type="Area2D" parent="."]
 visible = false

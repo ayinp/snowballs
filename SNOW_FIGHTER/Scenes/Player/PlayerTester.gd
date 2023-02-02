@@ -11,11 +11,12 @@ onready var animation = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
+# State tree
 var state = MOVE
-
 enum {
 	MOVE,
 	PICKUP,
+	THROW,
 }
 
 # items
@@ -32,6 +33,9 @@ var snowball_amount = 0
 onready var snowspot
 var in_snowspot = false
 
+################
+# MAIN PROCESS #
+################
 func _ready():
 	animationTree.active = true 
 	print(snowball_amount)
@@ -48,8 +52,14 @@ func _physics_process(_delta):
 			mouse_look()
 		PICKUP:
 			grab_snowball()
-	
-# Debug mode
+		THROW:
+			throw_ball()
+			mouse_look()
+			
+##################
+# Player Methods #
+##################
+# Debug mode #
 func snowbug():
 	var debug_mode = false
 	if Input.is_action_just_pressed("debug_mode"):
@@ -62,7 +72,7 @@ func snowbug():
 		snowball_amount = 10
 		break
 		
-# movement with W, A, S, D keys  
+# Input Movement #
 func wasd_move():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	input_direction = input_direction.normalized()
@@ -81,10 +91,10 @@ func wasd_move():
 	
 	if Input.is_action_pressed("grab_snowball") and snowball_amount < max_snowball:
 		state = PICKUP
-# Aiming with Mouse Right Click
-# TODO: Sync animation with snowball throw point
+		
+# Aiming #
 func mouse_look():
-	var node_ref = $"Snowball-Point"
+	var node_ref = $"Mc001-Throw2"
 	var pos_player = node_ref.get_global_position()
 	var pos_mouse = get_global_mouse_position()
 	var direction = (pos_mouse - pos_player).normalized()
@@ -95,24 +105,47 @@ func mouse_look():
 		animationTree.set("parameters/make_ball/blend_position", direction)
 		animationTree.set("parameters/throw/blend_position", direction)
 		
-		# Throw Snowball
+		# Change to throw state
 		if Input.is_action_just_pressed("throw_projectile"):
-			animationState.travel("throw")
-			if has_snowball:
-				var snowball_instance = snowball.instance()
-				snowball_instance.position = pos_player
-				snowball_instance.apply_impulse(Vector2(), direction * snowball_speed)
-				get_tree().get_root().add_child(snowball_instance)
-				snowball_amount -= 1
-				if snowball_amount == 0:
-					has_snowball = false
-			else:
-				print("No snowball made")
-					 
-# Pick up snowball with F key while in snowspot
+			state = THROW
+		
+# Throw snowball start #
+func throw_ball():
+	animationState.travel("throw")
+
+# Instance snowball #
+func throw_animation():
+	var node_ref = $"Snowball-Point"
+	var pos_player = node_ref.get_global_position()
+	var pos_mouse = get_global_mouse_position()
+	var direction = (pos_mouse - pos_player).normalized()
+	
+	state = THROW
+	
+	if has_snowball:
+		var snowball_instance = snowball.instance()
+		snowball_instance.position = pos_player
+		snowball_instance.apply_impulse(Vector2(), direction * snowball_speed)
+		get_tree().get_root().add_child(snowball_instance)
+		snowball_amount -= 1
+		if snowball_amount == 0:
+			has_snowball = false
+	else:
+		print("No snowball made")
+
+# Throw snowball finished #
+func throw_animation_finished():
+	if Input.is_action_pressed("throw_projectile"):
+		throw_ball()
+	else:
+		state = MOVE
+		velocity = Vector2.ZERO
+	
+# Pick up snowball start #
 func grab_snowball():
 	animationState.travel("make_ball")
 				
+# Pick up snowball finished #
 func grab_snowball_animation_finished():
 	snowball_amount += 1
 	has_snowball = true
@@ -120,18 +153,10 @@ func grab_snowball_animation_finished():
 		grab_snowball()
 	else:
 		state = MOVE
+		velocity = Vector2.ZERO
 	
 # TODO: Implement dying animation
 func death():
 	if health == 0:
 		self.queue_free()
 		get_tree().reload_current_scene()
-		
-
-
-
-
-
-
-
-
