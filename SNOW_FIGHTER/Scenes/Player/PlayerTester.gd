@@ -4,7 +4,7 @@ var my_id = "Player"
 # player variables
 export var speed = 80
 export var accel = 8
-export var friction = 9
+export var friction = 7
 var velocity = Vector2.ZERO
 onready var animation = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -33,6 +33,7 @@ func snowbug():
 	while debug_mode == true:
 		has_snowball = true
 		max_snowball = 10
+		health = 100
 		snowball_amount = 10
 		break
 		

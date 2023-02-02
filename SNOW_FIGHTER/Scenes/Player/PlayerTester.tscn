@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Scenes/Player/PlayerTester.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Player/MC001-Throw2.png" type="Texture" id=2]
@@ -295,8 +295,6 @@ tracks/0/keys = {
 "values": [ 6, 5, 7, 5 ]
 }
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=82]
-
 [sub_resource type="AnimationNodeAnimation" id=49]
 animation = "idle_left"
 
@@ -413,12 +411,10 @@ auto_advance = true
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=61]
-states/BlendSpace2D/node = SubResource( 82 )
-states/BlendSpace2D/position = Vector2( 731.192, 113 )
 states/idle/node = SubResource( 53 )
 states/idle/position = Vector2( 318, 93 )
 states/make_ball/node = SubResource( 75 )
-states/make_ball/position = Vector2( 120, 93 )
+states/make_ball/position = Vector2( 118, 93 )
 states/throw/node = SubResource( 67 )
 states/throw/position = Vector2( 318, 203 )
 states/walk/node = SubResource( 58 )
@@ -432,7 +428,6 @@ graph_offset = Vector2( -206.808, 0 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 0
 script = ExtResource( 1 )
-friction = 1
 
 [node name="Mc001-Throw2" type="Sprite" parent="."]
 position = Vector2( 0, -5 )
@@ -491,9 +486,8 @@ tree_root = SubResource( 61 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 62 )
-parameters/BlendSpace2D/blend_position = Vector2( 0, 0 )
 parameters/idle/blend_position = Vector2( 0, 0.1 )
-parameters/make_ball/blend_position = Vector2( 0, 1.1 )
+parameters/make_ball/blend_position = Vector2( 0.00156736, 0.0474138 )
 parameters/throw/blend_position = Vector2( 0, 0.1 )
 parameters/walk/blend_position = Vector2( 0, 0.0572255 )
 
