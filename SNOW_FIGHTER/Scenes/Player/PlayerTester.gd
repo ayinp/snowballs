@@ -2,18 +2,26 @@ extends KinematicBody2D
 var my_id = "Player"
 
 # player variables
+var velocity = Vector2.ZERO
+export var health = 1
 export var speed = 80
 export var accel = 8
 export var friction = 7
-var velocity = Vector2.ZERO
 onready var animation = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
+var state = MOVE
+
+enum {
+	MOVE,
+	PICKUP,
+}
+
+# items
 onready var snowflakes = 0
 onready var jacket = false
 onready var pocket = false
-var health = 1
 
 # snowball variables
 export var snowball_speed = 250
@@ -24,9 +32,26 @@ var snowball_amount = 0
 onready var snowspot
 var in_snowspot = false
 
-var debug_mode = false
-
+func _ready():
+	animationTree.active = true 
+	print(snowball_amount)
+	print(in_snowspot)
+	
+func _process(_delta):
+	death()
+	snowbug()
+	
+func _physics_process(_delta):
+	match state:
+		MOVE:
+			wasd_move()
+			mouse_look()
+		PICKUP:
+			grab_snowball()
+	
+# Debug mode
 func snowbug():
+	var debug_mode = false
 	if Input.is_action_just_pressed("debug_mode"):
 		debug_mode = true
 		print("Debug mode: ", debug_mode)
@@ -37,9 +62,7 @@ func snowbug():
 		snowball_amount = 10
 		break
 		
-# movement with W, A, S, D keys
-# TODO: Reset animation to idle state when stopped. 
-# FIXME: When a button is pressed quick, no animation plays.  
+# movement with W, A, S, D keys  
 func wasd_move():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	input_direction = input_direction.normalized()
@@ -47,32 +70,18 @@ func wasd_move():
 	if input_direction != Vector2.ZERO:
 		animationTree.set("parameters/idle/blend_position", input_direction)
 		animationTree.set("parameters/walk/blend_position", input_direction)
+		animationTree.set("parameters/make_ball/blend_position", input_direction)
 		animationState.travel("walk")
 		velocity = velocity.move_toward(input_direction * speed, accel)
 	else:
 		animationState.travel("idle")
 		velocity = velocity.move_toward(Vector2.ZERO, friction)
+		
 	velocity = move_and_slide(velocity)
 	
-	if Input.is_action_just_pressed("grab_snowball"):
-	#in_snowspot and 
-		#animationTree.set("parameters/idle/blend_position", input_direction)
-		animationTree.set("parameters/make_ball/blend_position", input_direction)
-		if not has_snowball:
-			snowball_amount += 1
-			animationState.travel("make_ball")
-			has_snowball = true
-			print(snowball_amount)
-		elif Input.is_action_pressed("grab_snowball") and has_snowball:
-				animationState.travel("make_ball")
-				if snowball_amount < max_snowball:
-					snowball_amount += 1
-					print(snowball_amount)
-				else:
-					print("hands full")
-
+	if Input.is_action_pressed("grab_snowball") and snowball_amount < max_snowball:
+		state = PICKUP
 # Aiming with Mouse Right Click
-# FIXME: stutter at the end of the throw animation
 # TODO: Sync animation with snowball throw point
 func mouse_look():
 	var node_ref = $"Snowball-Point"
@@ -83,6 +92,7 @@ func mouse_look():
 	if Input.is_action_pressed("ui_accept"):
 		animationTree.set("parameters/idle/blend_position", direction)
 		animationTree.set("parameters/walk/blend_position", direction)
+		animationTree.set("parameters/make_ball/blend_position", direction)
 		animationTree.set("parameters/throw/blend_position", direction)
 		
 		# Throw Snowball
@@ -100,43 +110,24 @@ func mouse_look():
 				print("No snowball made")
 					 
 # Pick up snowball with F key while in snowspot
-# TODO: Implement animation for making a snowball
 func grab_snowball():
-		var direction = $".".get_global_position()
-		#animationTree.set("parameters/idle/blend_position", direction)
-		#animationTree.set("parameters/walk/blend_position", direction)
-		animationTree.set("parameters/make_ball/blend_position", direction)
-		if in_snowspot and Input.is_action_just_pressed("grab_snowball"):
-			if not has_snowball:
-				animationState.travel("make_ball")
-				has_snowball = true
-				snowball_amount += 1
-				print(snowball_amount)
-			elif has_snowball:
-				if snowball_amount < max_snowball:
-					snowball_amount += 1
-					print(snowball_amount)
-				else:
-					print("hands full")
-					
+	animationState.travel("make_ball")
+				
+func grab_snowball_animation_finished():
+	snowball_amount += 1
+	has_snowball = true
+	if Input.is_action_pressed("grab_snowball") and snowball_amount < max_snowball:
+		grab_snowball()
+	else:
+		state = MOVE
+	
 # TODO: Implement dying animation
 func death():
 	if health == 0:
 		self.queue_free()
 		get_tree().reload_current_scene()
 		
-func _ready():
-	print(snowball_amount)
-	print(in_snowspot)
-	
-func _physics_process(_delta):
-	wasd_move()
-	mouse_look()
-	grab_snowball()
 
-func _process(_delta):
-	death()
-	snowbug()
 
 
 

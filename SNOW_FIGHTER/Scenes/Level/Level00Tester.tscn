@@ -1,14 +1,33 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/Snowspot/SnowspotCorner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Items/Jacket.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Walls/Wall05Top.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Snowspot/Snowspot4x2r.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Trees/Tree02.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Snowspot/Snowspot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallTopCornerRight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallRight2x1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallLevel00Start.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallBottom2x1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallTopLeftTurn.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Cover/Cover1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallBottom3x1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Walls/WallProximity.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallTopCorners3.5.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallLeft1x1.5.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallBottomCorners.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallBottom3x2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Walls/Prefabs/WallRight4x1Var01.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Walls/Wall06Bottom.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Enemies/Enemy1.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Enemies/Enemy2.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Scenes/Trees/Tree01.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Enemies/Enemy3.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Scenes/Items/Snowball Pocket.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scenes/Items/Snowflake.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Player/PlayerTester.tscn" type="PackedScene" id=28]
 
 [node name="Level00" type="Node2D"]
 
@@ -1333,5 +1352,217 @@ collision_mask = 39
 position = Vector2( 464, 272 )
 collision_mask = 39
 
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Cover" parent="YSort" instance=ExtResource( 12 )]
+visible = false
+cell_size = Vector2( 8, 8 )
+tile_data = PoolIntArray( 65529, 1, 0, 196620, 1, 7, 262151, 1, 65537, 262156, 1, 0, 327692, 1, 0, 393223, 1, 0, 393228, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458785, 1, 196608, 458795, 1, 196612, 458796, 1, 7, 524321, 1, 131072, 524332, 1, 196612, 524333, 1, 7, 589857, 1, 196608, 589869, 1, 131074, 655405, 1, 131074, 720941, 1, 196610, 786477, 1, 131074, 852002, 1, 65536, 852013, 1, 131074, 917533, 1, 4, 917534, 1, 6, 917535, 1, 7, 917538, 1, 65540, 917541, 1, 7, 917549, 1, 131074, 983069, 1, 65540, 983071, 1, 65543, 983074, 1, 131076, 983077, 1, 131079, 983085, 1, 131074, 1048610, 1, 196612, 1048611, 1, 196613, 1048612, 1, 196614, 1048613, 1, 196615, 1048621, 1, 131074, 1114157, 1, 131074, 1179650, 1, 65537, 1179651, 1, 196613, 1179652, 1, 196614, 1179653, 1, 196613, 1179654, 1, 196614, 1179655, 1, 196613, 1179656, 1, 196614, 1179657, 1, 196614, 1179658, 1, 196613, 1179659, 1, 196614, 1179660, 1, 196613, 1179661, 1, 196614, 1179682, 1, 65537, 1179683, 1, 5, 1179684, 1, 6, 1179685, 1, 5, 1179686, 1, 6, 1179687, 1, 5, 1179688, 1, 7, 1245200, 1, 4, 1245201, 1, 5, 1245202, 1, 6, 1245203, 1, 7, 1245224, 1, 196612, 1245225, 1, 5, 1245226, 1, 6, 1245227, 1, 5, 1245228, 1, 6, 1310739, 1, 65536, 1376260, 1, 196613, 1376261, 1, 196614, 1441806, 1, 7, 1507342, 1, 65543, 1572878, 1, 131079, 1638414, 1, 65543, 1703950, 1, 131079, 1703974, 1, 65537, 1703975, 1, 65537, 1769475, 1, 4, 1769476, 1, 5, 1769477, 1, 6, 1769478, 1, 5, 1769479, 1, 5, 1769480, 1, 6, 1769486, 1, 196615, 1835011, 1, 65540, 1900547, 1, 131076, 1900582, 1, 4, 1900583, 1, 5, 1900584, 1, 6, 1900585, 1, 5, 1900586, 1, 6, 1900587, 1, 5, 1900588, 1, 7, 1966083, 1, 196612, 1966118, 1, 65540, 1966124, 1, 65543, 2031654, 1, 131076, 2031660, 1, 131079, 2097190, 1, 196612 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 28 )]
+position = Vector2( 79, 29 )
+
+[node name="Walls" type="YSort" parent="YSort"]
+
+[node name="WallTop" parent="YSort/Walls" instance=ExtResource( 3 )]
+position = Vector2( 40, 172 )
+collision_mask = 39
+
+[node name="WallLevel00Start" parent="YSort/Walls" instance=ExtResource( 9 )]
+position = Vector2( 78, 59 )
+collision_mask = 39
+
+[node name="WallBottom3x1" parent="YSort/Walls" instance=ExtResource( 13 )]
+position = Vector2( 40, 148 )
+collision_layer = 8
+collision_mask = 39
+
+[node name="WallBottom2x1" parent="YSort/Walls" instance=ExtResource( 10 )]
+position = Vector2( 95, 150 )
+collision_mask = 39
+
+[node name="WallRight2x1" parent="YSort/Walls" instance=ExtResource( 8 )]
+position = Vector2( 115, 192 )
+scale = Vector2( 0.996827, 1 )
+collision_mask = 39
+
+[node name="WallTopLeftTurn" parent="YSort/Walls" instance=ExtResource( 11 )]
+
+[node name="WallTopCornerRight" parent="YSort/Walls" instance=ExtResource( 7 )]
+position = Vector2( 145, 158 )
+collision_layer = 8
+collision_mask = 39
+
+[node name="WallLeft1x1-5" parent="YSort/Walls" instance=ExtResource( 16 )]
+position = Vector2( 267, 68 )
+collision_layer = 8
+collision_mask = 39
+
+[node name="WallTopCorners" parent="YSort/Walls" instance=ExtResource( 15 )]
+position = Vector2( 243, 117 )
+collision_layer = 8
+collision_mask = 39
+
+[node name="WallBottomCorners" parent="YSort/Walls" instance=ExtResource( 17 )]
+position = Vector2( 288, 127 )
+collision_layer = 8
+collision_mask = 39
+
+[node name="WallBottom3x2" parent="YSort/Walls" instance=ExtResource( 18 )]
+position = Vector2( 320, 155 )
+
+[node name="WallRight4x1" parent="YSort/Walls" instance=ExtResource( 19 )]
+position = Vector2( 356, 64 )
+collision_mask = 39
+
+[node name="WallBottom" parent="YSort/Walls" instance=ExtResource( 20 )]
+position = Vector2( 312, 216 )
+collision_mask = 39
+
+[node name="WallProximity" parent="YSort/Walls/WallBottom" instance=ExtResource( 14 )]
+position = Vector2( 0, -3 )
+
+[node name="WallTopCorners2" parent="YSort/Walls" instance=ExtResource( 15 )]
+position = Vector2( 332, 235 )
+collision_layer = 8
+collision_mask = 39
+
+[node name="Enemy" type="YSort" parent="YSort"]
+
+[node name="Snowman6" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 313, 160 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" parent="YSort/Enemy/Snowman6" index="0"]
+visible = true
+
+[node name="Snowman7" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 334, 247 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 48, 112 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman2" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 88, 110 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman8" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 160, 71 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman9" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 191, 88 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman3" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 53, 234 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman4" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 374, 71 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Snowman5" parent="YSort/Enemy" instance=ExtResource( 21 )]
+position = Vector2( 373, 133 )
+collision_mask = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Rat" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 84, 158 )
+collision_layer = 2
+
+[node name="Rat2" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 211, 251 )
+collision_layer = 2
+
+[node name="Rat3" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 220, 227 )
+collision_layer = 2
+
+[node name="Rat4" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 308, 74 )
+collision_layer = 2
+
+[node name="Rat5" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 452, 203 )
+collision_layer = 2
+
+[node name="Rat6" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 419, 172 )
+collision_layer = 2
+
+[node name="Rat8" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 435, 140 )
+collision_layer = 2
+
+[node name="Rat7" parent="YSort/Enemy" instance=ExtResource( 22 )]
+position = Vector2( 452, 43 )
+collision_layer = 2
+
+[node name="LilTim" parent="YSort/Enemy" instance=ExtResource( 25 )]
+position = Vector2( 200, 176 )
+collision_layer = 2
+
+[node name="LilTim2" parent="YSort/Enemy" instance=ExtResource( 25 )]
+position = Vector2( 105, 264 )
+collision_layer = 2
+
+[node name="LilTim3" parent="YSort/Enemy" instance=ExtResource( 25 )]
+position = Vector2( 351, 152 )
+collision_layer = 2
+
+[node name="LilTim4" parent="YSort/Enemy" instance=ExtResource( 25 )]
+position = Vector2( 336, 217 )
+collision_layer = 2
+
+[node name="LilTim5" parent="YSort/Enemy" instance=ExtResource( 25 )]
+position = Vector2( 424, 40 )
+collision_layer = 2
+
 [editable path="Items/Jacket"]
 [editable path="Items/Snowball Pocket"]
+[editable path="YSort/Enemy/Snowman6"]
+[editable path="YSort/Enemy/Snowman7"]
+[editable path="YSort/Enemy/Snowman"]
+[editable path="YSort/Enemy/Snowman2"]
+[editable path="YSort/Enemy/Snowman8"]
+[editable path="YSort/Enemy/Snowman9"]
+[editable path="YSort/Enemy/Snowman3"]
+[editable path="YSort/Enemy/Snowman4"]
+[editable path="YSort/Enemy/Snowman5"]
+[editable path="YSort/Enemy/Rat"]
+[editable path="YSort/Enemy/Rat2"]
+[editable path="YSort/Enemy/Rat3"]
+[editable path="YSort/Enemy/Rat4"]
+[editable path="YSort/Enemy/Rat5"]
+[editable path="YSort/Enemy/Rat6"]
+[editable path="YSort/Enemy/Rat8"]
+[editable path="YSort/Enemy/Rat7"]
