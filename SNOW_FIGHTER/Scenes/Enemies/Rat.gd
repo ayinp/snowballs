@@ -2,6 +2,7 @@ extends KinematicBody2D
 #
 var my_id = "rat"
 var crouch = false
+var in_cover = false
 #var speed = 80
 #var motion = Vector2(0,0)
 ##onready var p = $"../Player"

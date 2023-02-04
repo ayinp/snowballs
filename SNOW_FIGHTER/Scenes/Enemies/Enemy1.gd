@@ -20,6 +20,8 @@ var max_snowball = 10
 var snowball_amount = 10
 onready var snowspot
 var in_snowspot = false
+var in_cover = false
+var crouch = false
 
 var last_fire_time = 0
 

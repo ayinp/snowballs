@@ -115,7 +115,6 @@ func mouse_look():
 		if sight.is_colliding() and sight.get_collider().is_in_group("enemies"):
 			sight.get_collider().in_cover = false
 			
-				
 		# Change to throw state
 		if Input.is_action_just_pressed("throw_projectile"):
 			state = THROW
