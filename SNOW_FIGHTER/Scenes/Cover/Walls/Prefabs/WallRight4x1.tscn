@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Cover/Walls/WallProximity.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Environment/Walls/008-Right.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.5, 32 )
+
+[node name="WallRight4x1" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 7
+
+[node name="008-Right13" type="Sprite" parent="."]
+position = Vector2( -4, 24 )
+texture = ExtResource( 3 )
+
+[node name="008-Right14" type="Sprite" parent="."]
+position = Vector2( -4, 8 )
+texture = ExtResource( 3 )
+
+[node name="008-Right15" type="Sprite" parent="."]
+position = Vector2( -4, -8 )
+texture = ExtResource( 3 )
+
+[node name="008-Right16" type="Sprite" parent="."]
+position = Vector2( -4, -24 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 1 )
+
+[node name="WallProximity" parent="." instance=ExtResource( 2 )]
+scale = Vector2( 1.08939, 3.1817 )

@@ -5,14 +5,14 @@
 [ext_resource path="res://Scenes/Trees/Tree01.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Cover/Cover1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Enemies/Enemy1.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Enemies/Enemy2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Enemies/Enemy3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Enemies/Snowman.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Enemies/Rat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Enemies/LilTim.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Items/Jacket.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Items/Snowball Pocket.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Items/Snowflake.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Snowspot/Snowspot.tscn" type="PackedScene" id=12]
-[ext_resource path="res://cornerTreeGroup01.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Trees/cornerTreeGroup01.tscn" type="PackedScene" id=13]
 
 [node name="Node" type="Node2D"]
 

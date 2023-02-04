@@ -18,6 +18,7 @@ var max_snowball = 2
 var snowball_amount = 0
 onready var snowspot
 var in_snowspot = false
+var crouch = false
 
 var debug_mode = false
 
@@ -98,6 +99,9 @@ func grab_snowball():
 					
 func death():
 	if health == 0:
+		# stop game state
+		# save enemies
+		# play death animation 
 		self.queue_free()
 		get_tree().reload_current_scene()
 		
