@@ -943,6 +943,7 @@ collision_mask = 39
 
 [node name="WallLevel00Start" parent="YSort/Walls" instance=ExtResource( 9 )]
 position = Vector2( 78, 59 )
+collision_mask = 39
 
 [node name="WallBottom3x1" parent="YSort/Walls" instance=ExtResource( 12 )]
 position = Vector2( 40, 148 )
