@@ -22,9 +22,10 @@ collision_layer = 8
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 10.5 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -10 )
 frames = SubResource( 2 )
 animation = "Tree01"
+offset = Vector2( 0, -3 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Testers/PlayerTester.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scripts/WallProximityTester.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Cover/Walls/WallProximity.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Enemies/Rat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Trees/Tree01.tscn" type="PackedScene" id=10]
 
 [node name="Node2D" type="Node2D"]
 
@@ -32,11 +33,11 @@ collision_mask = 3
 position = Vector2( 0, -4 )
 script = ExtResource( 7 )
 
-[node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 280, 151 )
+[node name="Camera2D" parent="YSort/WallBottom/WallProximity" instance=ExtResource( 3 )]
+position = Vector2( -40, 22 )
 
-[node name="Camera2D" parent="YSort/Player" instance=ExtResource( 3 )]
-position = Vector2( -39, -31 )
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 280, 153 )
 
 [node name="Rat" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 319, 88 )
@@ -44,5 +45,9 @@ position = Vector2( 319, 88 )
 [node name="Snowman" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 279, 107 )
 
+[node name="Tree01" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 193, 85 )
+
 [editable path="YSort/WallTop"]
 [editable path="YSort/WallBottom"]
+[editable path="YSort/Snowman"]

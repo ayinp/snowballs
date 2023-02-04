@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/Enemies/Hurtboxes/hurtbox.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Environment/Snow_Cover.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Enemies/Snowman.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Enemies/Enemy1.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 5, 8 )
@@ -59,9 +59,12 @@ modulate = Color( 0.490196, 0.262745, 0.262745, 1 )
 position = Vector2( 1, 0 )
 shape = SubResource( 6 )
 
-[node name="LastThrow" type="Timer" parent="."]
+[node name="EnemySight" type="RayCast2D" parent="."]
+collision_mask = 11
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
 [connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
 [connection signal="body_entered" from="hurtbox" to="hurtbox" method="_on_hurtbox_body_entered"]
-[connection signal="timeout" from="LastThrow" to="." method="_on_LastThrow_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

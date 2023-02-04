@@ -10,7 +10,9 @@ export var friction = 7
 onready var animation = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+onready var in_cover = false
 var crouch = false
+onready var sight = get_node("Sight")
 
 # State tree
 var state = MOVE
@@ -20,7 +22,7 @@ enum {
 	THROW,
 }
 
-# items
+# item variables
 onready var snowflakes = 0
 onready var jacket = false
 onready var pocket = false
@@ -43,6 +45,7 @@ func _ready():
 	print(in_snowspot)
 	
 func _process(_delta):
+	update_crouch()
 	death()
 	snowbug()
 	
@@ -99,17 +102,34 @@ func mouse_look():
 	var pos_player = node_ref.get_global_position()
 	var pos_mouse = get_global_mouse_position()
 	var direction = (pos_mouse - pos_player).normalized()
+	var sight_direction = (pos_mouse - pos_player).limit_length(50)
 	
 	if Input.is_action_pressed("ui_accept"):
 		animationTree.set("parameters/idle/blend_position", direction)
 		animationTree.set("parameters/walk/blend_position", direction)
 		animationTree.set("parameters/make_ball/blend_position", direction)
 		animationTree.set("parameters/throw/blend_position", direction)
+		sight.cast_to = sight_direction
+		sight.enabled = true
 		
+		if sight.is_colliding() and sight.get_collider().is_in_group("enemies"):
+			sight.get_collider().in_cover = false
+			
+				
 		# Change to throw state
 		if Input.is_action_just_pressed("throw_projectile"):
 			state = THROW
-		
+			
+	if Input.is_action_just_released("ui_accept"):
+		sight.enabled = false
+			
+func update_crouch():
+	if in_cover and not Input.is_action_pressed("ui_accept"):
+		crouch = true
+		# add crouching animation
+	else:
+		crouch = false 
+		# idle animation
 # Throw snowball start #
 func throw_ball():
 	animationState.travel("throw")
@@ -155,7 +175,7 @@ func grab_snowball_animation_finished():
 	else:
 		state = MOVE
 		velocity = Vector2.ZERO
-	
+		
 # TODO: Implement dying animation
 func death():
 	if health == 0:
